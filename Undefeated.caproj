@@ -55,7 +55,7 @@
         <object-type name="Browser" sid="418252449397849">
             <plugin id="Browser" />
         </object-type>
-        <object-type name="Tilemap" sid="220246149144330">
+        <object-type name="Tilemap_town" sid="220246149144330">
             <plugin id="Tilemap" />
             <texture />
             <tiles />
