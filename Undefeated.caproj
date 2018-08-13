@@ -1,0 +1,891 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Undefeated</name>
+    <description>Game</description>
+    <version>beta 0.01</version>
+    <author>newsoft</author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.newsoft.undefeated</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Mouse" sid="538596895589564">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Browser" sid="418252449397849">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Tilemap" sid="220246149144330">
+            <plugin id="Tilemap" />
+            <texture />
+            <tiles />
+        </object-type>
+        <object-type name="char_house" sid="544881961375584">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="468556455797733">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="886108284150036">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="505294738660166" speed="5">
+                    <frame duration="1" hotspotX="0.522936" hotspotY="0.653846" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\buat map\buildings_tiny_artwork_03_preview.jpg">
+                        <collision-poly>
+                            <point x="0.527828" y="0.25641" />
+                            <point x="0.908257" y="0.413061" />
+                            <point x="0.908257" y="0.897436" />
+                            <point x="0.12477" y="0.891026" />
+                            <point x="0.137615" y="0.403846" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="main_char" sid="327038156562590">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="direction" sid="800783523171828" type="string" />
+                <instance-variable name="health" sid="391775150769038" type="number" />
+                <instance-variable name="energy" sid="586130700745691" type="number" />
+                <instance-variable name="damage" sid="116422227291543" type="number" />
+                <instance-variable name="defense" sid="383420410013668" type="number" />
+                <instance-variable name="STR" sid="760863438808582" type="number" />
+                <instance-variable name="AGI" sid="323460896769293" type="number" />
+                <instance-variable name="INT" sid="241196840174306" type="number" />
+                <instance-variable name="job" sid="995165498917929" type="string" />
+                <instance-variable name="attack" sid="490397830739299" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="513331617069906">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="155129758950382">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="507173653922643">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="cleric_face_front" pingpong="0" repeatcount="1" repeatto="0" sid="765558061163415" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.555556" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.257143" y="0.166667" />
+                            <point x="0.485714" y="0.0555556" />
+                            <point x="0.771429" y="0.148148" />
+                            <point x="0.942857" y="0.5" />
+                            <point x="0.857143" y="0.907407" />
+                            <point x="0.485714" y="0.907407" />
+                            <point x="0.2" y="0.87037" />
+                            <point x="0.0857143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="cleric_face_back" pingpong="0" repeatcount="1" repeatto="0" sid="614481017072232" speed="5">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="0.446429" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.25641" y="0.178571" />
+                            <point x="0.487179" y="0.0535714" />
+                            <point x="0.769231" y="0.160714" />
+                            <point x="0.897436" y="0.5" />
+                            <point x="0.820513" y="0.875" />
+                            <point x="0.487179" y="0.857143" />
+                            <point x="0.205128" y="0.857143" />
+                            <point x="0.128205" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="cleric_face_left" pingpong="0" repeatcount="1" repeatto="0" sid="503281023809208" speed="5">
+                    <frame duration="1" hotspotX="0.40625" hotspotY="0.5" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.21875" y="0.125" />
+                            <point x="0.5" y="0.0714286" />
+                            <point x="0.75" y="0.142857" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.71875" y="0.839286" />
+                            <point x="0.5" y="0.928571" />
+                            <point x="0.1875" y="0.892857" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="cleric_face_right" pingpong="0" repeatcount="1" repeatto="0" sid="103827108186151" speed="5">
+                    <frame duration="1" hotspotX="0.59375" hotspotY="0.516667" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.28125" y="0.15" />
+                            <point x="0.5" y="0.1" />
+                            <point x="0.71875" y="0.15" />
+                            <point x="0.75" y="0.5" />
+                            <point x="0.75" y="0.866667" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.25" y="0.866667" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="8" loop="0" name="cleric_walk_front" pingpong="0" repeatcount="1" repeatto="0" sid="591298682620723" speed="5">
+                    <frame duration="1" hotspotX="0.513514" hotspotY="0.538462" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.216216" y="0.153846" />
+                            <point x="0.486486" y="0" />
+                            <point x="0.810811" y="0.134615" />
+                            <point x="0.918919" y="0.5" />
+                            <point x="0.837838" y="0.884615" />
+                            <point x="0.486486" y="0.884615" />
+                            <point x="0.216216" y="0.846154" />
+                            <point x="0.108108" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.487179" hotspotY="0.517241" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.25641" y="0.172414" />
+                            <point x="0.487179" y="0.0862069" />
+                            <point x="0.74359" y="0.172414" />
+                            <point x="0.871795" y="0.5" />
+                            <point x="0.74359" y="0.827586" />
+                            <point x="0.487179" y="0.87931" />
+                            <point x="0.230769" y="0.844828" />
+                            <point x="0.128205" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.487805" hotspotY="0.516667" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.268293" y="0.183333" />
+                            <point x="0.487805" y="0.1" />
+                            <point x="0.731707" y="0.183333" />
+                            <point x="0.829268" y="0.5" />
+                            <point x="0.707317" y="0.8" />
+                            <point x="0.487805" y="0.833333" />
+                            <point x="0.243902" y="0.833333" />
+                            <point x="0.170732" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.516667" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.268293" y="0.183333" />
+                            <point x="0.487805" y="0.0833333" />
+                            <point x="0.756098" y="0.166667" />
+                            <point x="0.878049" y="0.5" />
+                            <point x="0.756098" y="0.833333" />
+                            <point x="0.487805" y="0.85" />
+                            <point x="0.268293" y="0.816667" />
+                            <point x="0.146341" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.487179" hotspotY="0.508475" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.25641" y="0.169492" />
+                            <point x="0.487179" y="0.0677966" />
+                            <point x="0.74359" y="0.169492" />
+                            <point x="0.871795" y="0.491525" />
+                            <point x="0.74359" y="0.830508" />
+                            <point x="0.205128" y="0.864407" />
+                            <point x="0.102564" y="0.491525" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.487805" hotspotY="0.516667" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.268293" y="0.183333" />
+                            <point x="0.487805" y="0.0833333" />
+                            <point x="0.731707" y="0.183333" />
+                            <point x="0.829268" y="0.5" />
+                            <point x="0.731707" y="0.816667" />
+                            <point x="0.487805" y="0.85" />
+                            <point x="0.219512" y="0.85" />
+                            <point x="0.121951" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.474576" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.277778" y="0.169492" />
+                            <point x="0.5" y="0.0847458" />
+                            <point x="0.75" y="0.152542" />
+                            <point x="0.888889" y="0.491525" />
+                            <point x="0.777778" y="0.864407" />
+                            <point x="0.5" y="0.830508" />
+                            <point x="0.25" y="0.847458" />
+                            <point x="0.138889" y="0.491525" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.275" y="0.180328" />
+                            <point x="0.5" y="0.0819672" />
+                            <point x="0.75" y="0.163934" />
+                            <point x="0.85" y="0.491803" />
+                            <point x="0.75" y="0.836066" />
+                            <point x="0.25" y="0.836066" />
+                            <point x="0.125" y="0.491803" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="8" loop="0" name="cleric_walk_back" pingpong="0" repeatcount="1" repeatto="0" sid="879001880843024" speed="5">
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.472727" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.268293" y="0.2" />
+                            <point x="0.487805" y="0.0545455" />
+                            <point x="0.756098" y="0.181818" />
+                            <point x="0.878049" y="0.490909" />
+                            <point x="0.780488" y="0.836364" />
+                            <point x="0.487805" y="0.872727" />
+                            <point x="0.268293" y="0.8" />
+                            <point x="0.146341" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.487179" hotspotY="0.473684" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.25641" y="0.175439" />
+                            <point x="0.487179" y="0.0701754" />
+                            <point x="0.74359" y="0.175439" />
+                            <point x="0.846154" y="0.491228" />
+                            <point x="0.717949" y="0.807018" />
+                            <point x="0.487179" y="0.859649" />
+                            <point x="0.230769" y="0.842105" />
+                            <point x="0.128205" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.482143" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.25641" y="0.178571" />
+                            <point x="0.487179" y="0.0714286" />
+                            <point x="0.769231" y="0.160714" />
+                            <point x="0.871795" y="0.5" />
+                            <point x="0.74359" y="0.821429" />
+                            <point x="0.487179" y="0.839286" />
+                            <point x="0.25641" y="0.821429" />
+                            <point x="0.153846" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.464286" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.236842" y="0.160714" />
+                            <point x="0.5" y="0.0535714" />
+                            <point x="0.763158" y="0.160714" />
+                            <point x="0.894737" y="0.5" />
+                            <point x="0.763158" y="0.839286" />
+                            <point x="0.5" y="0.857143" />
+                            <point x="0.236842" y="0.839286" />
+                            <point x="0.105263" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.464286" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.25" y="0.178571" />
+                            <point x="0.5" y="0.0535714" />
+                            <point x="0.75" y="0.178571" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.75" y="0.821429" />
+                            <point x="0.5" y="0.857143" />
+                            <point x="0.25" y="0.821429" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.487805" hotspotY="0.491228" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.243902" y="0.175439" />
+                            <point x="0.487805" y="0.0701754" />
+                            <point x="0.731707" y="0.192982" />
+                            <point x="0.829268" y="0.491228" />
+                            <point x="0.756098" y="0.824561" />
+                            <point x="0.487805" y="0.859649" />
+                            <point x="0.268293" y="0.807018" />
+                            <point x="0.121951" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.475" hotspotY="0.473684" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.25" y="0.175439" />
+                            <point x="0.5" y="0.0877193" />
+                            <point x="0.725" y="0.192982" />
+                            <point x="0.825" y="0.491228" />
+                            <point x="0.75" y="0.824561" />
+                            <point x="0.5" y="0.842105" />
+                            <point x="0.25" y="0.824561" />
+                            <point x="0.125" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.487179" hotspotY="0.464286" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0" y="0.571429" />
+                            <point x="0" y="0.0714286" />
+                            <point x="0.846154" y="0.464286" />
+                            <point x="0.692308" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="8" loop="0" name="cleric_walk_left" pingpong="0" repeatcount="1" repeatto="0" sid="653736674567402" speed="5">
+                    <frame duration="1" hotspotX="0.405405" hotspotY="0.482143" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.27027" y="0.178571" />
+                            <point x="0.486486" y="0.0714286" />
+                            <point x="0.756757" y="0.160714" />
+                            <point x="0.810811" y="0.5" />
+                            <point x="0.810811" y="0.875" />
+                            <point x="0.486486" y="0.857143" />
+                            <point x="0.216216" y="0.857143" />
+                            <point x="0.324324" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.375" hotspotY="0.482143" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.25" y="0.142857" />
+                            <point x="0.5" y="0.0714286" />
+                            <point x="0.75" y="0.142857" />
+                            <point x="0.84375" y="0.5" />
+                            <point x="0.75" y="0.857143" />
+                            <point x="0.5" y="0.910714" />
+                            <point x="0.15625" y="0.910714" />
+                            <point x="0.28125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.375" hotspotY="0.491228" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.25" y="0.140351" />
+                            <point x="0.5" y="0.0877193" />
+                            <point x="0.71875" y="0.157895" />
+                            <point x="0.84375" y="0.491228" />
+                            <point x="0.71875" y="0.842105" />
+                            <point x="0.5" y="0.912281" />
+                            <point x="0.25" y="0.859649" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.324324" hotspotY="0.5" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.243243" y="0.155172" />
+                            <point x="0.486486" y="0.103448" />
+                            <point x="0.702703" y="0.189655" />
+                            <point x="0.756757" y="0.5" />
+                            <point x="0.648649" y="0.775862" />
+                            <point x="0.486486" y="0.913793" />
+                            <point x="0.189189" y="0.87931" />
+                            <point x="0.243243" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.333333" hotspotY="0.5" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.205128" y="0.142857" />
+                            <point x="0.487179" y="0.0714286" />
+                            <point x="0.717949" y="0.196429" />
+                            <point x="0.794872" y="0.5" />
+                            <point x="0.487179" y="0.892857" />
+                            <point x="0.179487" y="0.875" />
+                            <point x="0.25641" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.363636" hotspotY="0.474576" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.242424" y="0.135593" />
+                            <point x="0.484848" y="0.0847458" />
+                            <point x="0.727273" y="0.152542" />
+                            <point x="0.848485" y="0.491525" />
+                            <point x="0.69697" y="0.830508" />
+                            <point x="0.484848" y="0.898305" />
+                            <point x="0.272727" y="0.847458" />
+                            <point x="0.242424" y="0.491525" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.333333" hotspotY="0.491525" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.222222" y="0.135593" />
+                            <point x="0.5" y="0.0847458" />
+                            <point x="0.722222" y="0.169492" />
+                            <point x="0.805556" y="0.491525" />
+                            <point x="0.666667" y="0.79661" />
+                            <point x="0.5" y="0.898305" />
+                            <point x="0.277778" y="0.830508" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.34375" hotspotY="0.5" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0" y="0" />
+                            <point x="0.90625" y="0" />
+                            <point x="0.71875" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="8" loop="0" name="cleric_walk_right" pingpong="0" repeatcount="1" repeatto="0" sid="291913529998006" speed="5">
+                    <frame duration="1" hotspotX="0.583333" hotspotY="0.5" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.25" y="0.160714" />
+                            <point x="0.5" y="0.0892857" />
+                            <point x="0.722222" y="0.178571" />
+                            <point x="0.666667" y="0.5" />
+                            <point x="0.805556" y="0.875" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.166667" y="0.892857" />
+                            <point x="0.166667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.636364" hotspotY="0.491228" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.242424" y="0.140351" />
+                            <point x="0.484848" y="0.0701754" />
+                            <point x="0.757576" y="0.140351" />
+                            <point x="0.727273" y="0.491228" />
+                            <point x="0.818182" y="0.894737" />
+                            <point x="0.484848" y="0.894737" />
+                            <point x="0.272727" y="0.842105" />
+                            <point x="0.181818" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.65625" hotspotY="0.482143" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.25" y="0.142857" />
+                            <point x="0.5" y="0.0714286" />
+                            <point x="0.78125" y="0.125" />
+                            <point x="0.75" y="0.5" />
+                            <point x="0.75" y="0.857143" />
+                            <point x="0.5" y="0.910714" />
+                            <point x="0.28125" y="0.839286" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.6875" hotspotY="0.491228" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.28125" y="0.157895" />
+                            <point x="0.5" y="0.0701754" />
+                            <point x="0.78125" y="0.122807" />
+                            <point x="0.78125" y="0.877193" />
+                            <point x="0.5" y="0.894737" />
+                            <point x="0.34375" y="0.807018" />
+                            <point x="0.1875" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.65" hotspotY="0.5" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.275" y="0.196429" />
+                            <point x="0.5" y="0.0892857" />
+                            <point x="0.775" y="0.160714" />
+                            <point x="0.725" y="0.5" />
+                            <point x="0.725" y="0.803571" />
+                            <point x="0.5" y="0.910714" />
+                            <point x="0.225" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.628571" hotspotY="0.508772" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.285714" y="0.175439" />
+                            <point x="0.485714" y="0.0877193" />
+                            <point x="0.771429" y="0.140351" />
+                            <point x="0.714286" y="0.824561" />
+                            <point x="0.485714" y="0.912281" />
+                            <point x="0.342857" y="0.789474" />
+                            <point x="0.171429" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.666667" hotspotY="0.482759" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.272727" y="0.155172" />
+                            <point x="0.484848" y="0.0862069" />
+                            <point x="0.757576" y="0.137931" />
+                            <point x="0.757576" y="0.5" />
+                            <point x="0.727273" y="0.844828" />
+                            <point x="0.484848" y="0.913793" />
+                            <point x="0.30303" y="0.827586" />
+                            <point x="0.151515" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.645161" hotspotY="0.5" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\2.PNG">
+                        <collision-poly>
+                            <point x="0.258065" y="0.137931" />
+                            <point x="0.483871" y="0.0862069" />
+                            <point x="0.741935" y="0.137931" />
+                            <point x="0.741935" y="0.862069" />
+                            <point x="0.483871" y="0.913793" />
+                            <point x="0.258065" y="0.862069" />
+                            <point x="0.129032" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="cleric_attack_front" pingpong="0" repeatcount="1" repeatto="0" sid="598888676095005" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.545455" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.257143" y="0.163636" />
+                            <point x="0.485714" y="0.0909091" />
+                            <point x="0.742857" y="0.163636" />
+                            <point x="0.857143" y="0.490909" />
+                            <point x="0.885714" y="0.927273" />
+                            <point x="0.485714" y="0.927273" />
+                            <point x="0.228571" y="0.854545" />
+                            <point x="0.171429" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.519231" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.25" y="0.153846" />
+                            <point x="0.5" y="0.0384615" />
+                            <point x="0.8125" y="0.115385" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.875" y="0.923077" />
+                            <point x="0.09375" y="0.942308" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.54717" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.241379" y="0.132075" />
+                            <point x="0.482759" y="0.0566038" />
+                            <point x="0.793103" y="0.113208" />
+                            <point x="0.965517" y="0.490566" />
+                            <point x="0.827586" y="0.90566" />
+                            <point x="0.0689655" y="0.962264" />
+                            <point x="0.0689655" y="0.490566" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.431818" hotspotY="0.537037" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.204545" y="0.166667" />
+                            <point x="0.5" y="0.0740741" />
+                            <point x="0.704545" y="0.240741" />
+                            <point x="0.772727" y="0.5" />
+                            <point x="0.636364" y="0.703704" />
+                            <point x="0.5" y="0.944444" />
+                            <point x="0.0909091" y="0.925926" />
+                            <point x="0.113636" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.382979" hotspotY="0.509804" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.170213" y="0.156863" />
+                            <point x="0.489362" y="0.0588235" />
+                            <point x="0.659574" y="0.313726" />
+                            <point x="0.829787" y="0.490196" />
+                            <point x="0.553191" y="0.588235" />
+                            <point x="0.489362" y="0.960784" />
+                            <point x="0.0638298" y="0.941176" />
+                            <point x="0.0851064" y="0.490196" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="cleric_attack_back" pingpong="0" repeatcount="1" repeatto="0" sid="406613215283754" speed="5">
+                    <frame duration="1" hotspotX="0.470588" hotspotY="0.492063">
+                        <collision-poly>
+                            <point x="0.323529" y="0.174603" />
+                            <point x="0.5" y="0.142857" />
+                            <point x="0.676471" y="0.174603" />
+                            <point x="0.823529" y="0.492063" />
+                            <point x="0.794118" y="0.888889" />
+                            <point x="0.5" y="0.84127" />
+                            <point x="0.205882" y="0.888889" />
+                            <point x="0.117647" y="0.492063" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.485714" hotspotY="0.484375">
+                        <collision-poly>
+                            <point x="0.342857" y="0.1875" />
+                            <point x="0.485714" y="0.15625" />
+                            <point x="0.657143" y="0.1875" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.828571" y="0.90625" />
+                            <point x="0.485714" y="0.84375" />
+                            <point x="0.228571" y="0.875" />
+                            <point x="0.114286" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.581395" hotspotY="0.533333">
+                        <collision-poly>
+                            <point x="0.348837" y="0.25" />
+                            <point x="0.488372" y="0.166667" />
+                            <point x="0.744186" y="0.183333" />
+                            <point x="0.883721" y="0.5" />
+                            <point x="0.860465" y="0.9" />
+                            <point x="0.488372" y="0.9" />
+                            <point x="0.325581" y="0.766667" />
+                            <point x="0.0465116" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.408163" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.22449" y="0.177419" />
+                            <point x="0.489796" y="0.129032" />
+                            <point x="0.632653" y="0.290323" />
+                            <point x="0.693878" y="0.5" />
+                            <point x="0.632653" y="0.709677" />
+                            <point x="0.489796" y="0.903226" />
+                            <point x="0.163265" y="0.870968" />
+                            <point x="0.102041" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.42" hotspotY="0.516129">
+                        <collision-poly>
+                            <point x="0.24" y="0.193548" />
+                            <point x="0.5" y="0.177419" />
+                            <point x="0.62" y="0.306452" />
+                            <point x="0.86" y="0.5" />
+                            <point x="0.6" y="0.677419" />
+                            <point x="0.5" y="0.935484" />
+                            <point x="0.14" y="0.887097" />
+                            <point x="0.14" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="cleric_attack_left" pingpong="0" repeatcount="1" repeatto="0" sid="654046960037341" speed="5">
+                    <frame duration="1" hotspotX="0.428571" hotspotY="0.490909" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.257143" y="0.163636" />
+                            <point x="0.485714" y="0.0727273" />
+                            <point x="0.771429" y="0.145455" />
+                            <point x="0.857143" y="0.490909" />
+                            <point x="0.8" y="0.872727" />
+                            <point x="0.485714" y="0.909091" />
+                            <point x="0.257143" y="0.836364" />
+                            <point x="0.285714" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.375" hotspotY="0.509434" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.1875" y="0.113208" />
+                            <point x="0.5" y="0.0377358" />
+                            <point x="0.78125" y="0.132075" />
+                            <point x="0.84375" y="0.490566" />
+                            <point x="0.75" y="0.849057" />
+                            <point x="0.5" y="0.943396" />
+                            <point x="0.1875" y="0.886792" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.45" hotspotY="0.5" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.25" y="0.185185" />
+                            <point x="0.5" y="0.0555556" />
+                            <point x="0.775" y="0.166667" />
+                            <point x="0.825" y="0.5" />
+                            <point x="0.775" y="0.833333" />
+                            <point x="0.5" y="0.907407" />
+                            <point x="0.35" y="0.740741" />
+                            <point x="0.275" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.55102" hotspotY="0.518519" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.408163" y="0.37037" />
+                            <point x="0.489796" y="0.0925926" />
+                            <point x="0.816327" y="0.166667" />
+                            <point x="0.857143" y="0.5" />
+                            <point x="0.816327" y="0.833333" />
+                            <point x="0.489796" y="0.925926" />
+                            <point x="0.44898" y="0.592593" />
+                            <point x="0.306122" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.54" hotspotY="0.518519" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.42" y="0.388889" />
+                            <point x="0.5" y="0.0740741" />
+                            <point x="0.82" y="0.166667" />
+                            <point x="0.84" y="0.5" />
+                            <point x="0.8" y="0.814815" />
+                            <point x="0.5" y="0.907407" />
+                            <point x="0.44" y="0.592593" />
+                            <point x="0.4" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="cleric_attack_right" pingpong="0" repeatcount="1" repeatto="0" sid="803287978776483" speed="5">
+                    <frame duration="1" hotspotX="0.638889" hotspotY="0.5" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.25" y="0.166667" />
+                            <point x="0.5" y="0.0555556" />
+                            <point x="0.777778" y="0.148148" />
+                            <point x="0.75" y="0.5" />
+                            <point x="0.777778" y="0.851852" />
+                            <point x="0.5" y="0.907407" />
+                            <point x="0.277778" y="0.814815" />
+                            <point x="0.194444" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.655172" hotspotY="0.490566" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.206897" y="0.113208" />
+                            <point x="0.482759" y="0.0377358" />
+                            <point x="0.793103" y="0.113208" />
+                            <point x="0.827586" y="0.490566" />
+                            <point x="0.827586" y="0.90566" />
+                            <point x="0.482759" y="0.924528" />
+                            <point x="0.172414" y="0.90566" />
+                            <point x="0.103448" y="0.490566" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.552632" hotspotY="0.509434" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.210526" y="0.150943" />
+                            <point x="0.5" y="0.0566038" />
+                            <point x="0.736842" y="0.188679" />
+                            <point x="0.710526" y="0.490566" />
+                            <point x="0.657895" y="0.754717" />
+                            <point x="0.5" y="0.924528" />
+                            <point x="0.210526" y="0.849057" />
+                            <point x="0.157895" y="0.490566" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.458333" hotspotY="0.518519" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.1875" y="0.166667" />
+                            <point x="0.5" y="0.0925926" />
+                            <point x="0.604167" y="0.351852" />
+                            <point x="0.708333" y="0.5" />
+                            <point x="0.5625" y="0.611111" />
+                            <point x="0.5" y="0.925926" />
+                            <point x="0.1875" y="0.833333" />
+                            <point x="0.145833" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.446809" hotspotY="0.470588" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\karakter\3.PNG">
+                        <collision-poly>
+                            <point x="0.148936" y="0.137255" />
+                            <point x="0.489362" y="0.0392157" />
+                            <point x="0.659574" y="0.313726" />
+                            <point x="0.595745" y="0.490196" />
+                            <point x="0.553191" y="0.588235" />
+                            <point x="0.489362" y="0.921569" />
+                            <point x="0.148936" y="0.862745" />
+                            <point x="0.12766" y="0.490196" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="915726920616395">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="MainBackground" sid="555019405685287">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\pingk\Downloads\bg.jpg" />
+        </object-type>
+        <object-type name="GameMenu" sid="132579541667822">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\button start screen\button new game sama load game with text.png" />
+        </object-type>
+        <object-type name="SettingButton" sid="284829789146303">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\button start screen\setting button.png" />
+        </object-type>
+        <object-type name="ExitButton" sid="275176417520145">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\button start screen\exit button.png" />
+        </object-type>
+        <object-type name="NewGame" sid="643889976874862">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154145943907276" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LoadGame" sid="374567487582240">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="255367651290531" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Exit" sid="187393816692541">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="162401720986546" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Setting" sid="220519122535576">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668173389089020" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="MenuButton" plugin-id="Sprite" sid="910771097640765">
+            <members>
+                <member>Exit</member>
+                <member>LoadGame</member>
+                <member>NewGame</member>
+                <member>Setting</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Destination" sid="130982696618833" type="string" />
+            </instance-variables>
+        </family>
+    </families>
+    <layout-folder>
+        <layout-folder name="Non-game">
+            <layout>start_screen.xml</layout>
+            <layout>setting_page.xml</layout>
+        </layout-folder>
+        <layout-folder name="Game">
+            <layout>game_play.xml</layout>
+        </layout-folder>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>start_screen.xml</event-sheet>
+        <event-sheet>game_play.xml</event-sheet>
+        <event-sheet>setting_page.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="3" />
+        <global-instance type="Browser" uid="4" />
+        <global-instance type="Keyboard" uid="8" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
