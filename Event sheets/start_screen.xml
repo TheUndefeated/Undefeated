@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>start_screen</name>
+    <events>
+        <event-block sid="658813376468180">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="680231713378448" type="Mouse">
+                    <param id="0" name="Object">MenuButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="218664590624480" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="221882997815358">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="783946204637963" type="Mouse">
+                    <param id="0" name="Object">MenuButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="553640255411490" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="446809395148812">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="983715022186366" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">MenuButton</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="741976651571397">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="770174239503478" type="MenuButton">
+                            <param id="0" name="Instance variable">Destination</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;newgame&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="637917350516690" type="System">
+                            <param id="0" name="Layout">&quot;game_play&quot;</param>
+                        </action>
+                        <action id="0" name="Set cursor style" sid="616882786536774" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="944606899650128">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="868417525142989" type="MenuButton">
+                            <param id="0" name="Instance variable">Destination</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;setting&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="232793992334313" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="598507380588076">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="749060994956488" type="MenuButton">
+                            <param id="0" name="Instance variable">Destination</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;exit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Close" sid="361897502081008" type="Browser" />
+                        <action id="0" name="Set cursor style" sid="311980189358438" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="838516732810386">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="545278807390197" type="MenuButton">
+                            <param id="0" name="Instance variable">Destination</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;loadgame&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="422191884568346" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
