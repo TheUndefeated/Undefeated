@@ -158,7 +158,7 @@
                         <STR>10</STR>
                         <AGI>10</AGI>
                         <INT>10</INT>
-                        <job>cleric</job>
+                        <job></job>
                         <attack>false</attack>
                     </instance-variables>
                     <behavior-instances>
@@ -187,14 +187,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>113</x>
-                        <y>32</y>
+                        <x>112</x>
+                        <y>38</y>
                         <z>0</z>
                         <width>35</width>
-                        <height>54</height>
+                        <height>53</height>
                         <depth>0</depth>
                         <hotspotX>0.514285743</hotspotX>
-                        <hotspotY>0.555555582</hotspotY>
+                        <hotspotY>0.509433985</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

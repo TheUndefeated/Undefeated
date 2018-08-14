@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>game_play</name>
     <events>
+        <variable constant="0" name="job" sid="536038304458999" static="0" type="number">0</variable>
         <event-group description="" sid="438856717123978" title="Player movement">
             <sub-events>
                 <event-block sid="236679085946683">
@@ -121,27 +122,27 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="336209735872873">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="874187299537331" type="main_char">
+                                    <param id="0" name="Instance variable">attack</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="366544510249005" type="System">
+                                    <param id="0" name="Group name">&quot;Player movement&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="283740121558322" type="main_char">
+                                    <param id="0" name="Animation">main_char.job&amp;&quot;_attack_&quot;&amp;main_char.direction</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="473870253085981" type="main_char">
+                                    <param id="0" name="Speed">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="336209735872873">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="874187299537331" type="main_char">
-                            <param id="0" name="Instance variable">attack</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Set group active" sid="366544510249005" type="System">
-                            <param id="0" name="Group name">&quot;Player movement&quot;</param>
-                            <param id="1" name="State">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="283740121558322" type="main_char">
-                            <param id="0" name="Animation">main_char.job&amp;&quot;_attack_&quot;&amp;main_char.direction</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="6" name="Set speed" sid="473870253085981" type="main_char">
-                            <param id="0" name="Speed">10</param>
-                        </action>
-                    </actions>
                 </event-block>
                 <event-block sid="520554340195591">
                     <conditions>
@@ -157,6 +158,187 @@
                         <action id="-12" name="Set group active" sid="643894903940479" type="System">
                             <param id="0" name="Group name">&quot;Player movement&quot;</param>
                             <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="348322621748685">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="357477417036601" type="Keyboard">
+                            <param id="0" name="Key">76 (L)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="594029583751381">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="853081226099515" type="main_char">
+                                    <param id="0" name="Instance variable">attack</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="644621014772511">
+                                    <conditions>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="264310432299749" type="main_char">
+                                            <param id="0" name="Instance variable">job</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;beginner&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="790328273567162" type="main_char">
+                                            <param id="0" name="Instance variable">attack</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="159351852773797">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="605307575307575" type="main_char">
+                                    <param id="0" name="Instance variable">attack</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="521004631626307" type="System">
+                                    <param id="0" name="Group name">&quot;Player movement&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="199352707653817" type="main_char">
+                                    <param id="0" name="Animation">main_char.job&amp;&quot;_skill_&quot;&amp;main_char.direction</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="816977030202206" type="main_char">
+                                    <param id="0" name="Speed">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="242584587264824">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="533503963401635" type="main_char">
+                            <param id="0" name="Animation">main_char.job&amp;&quot;_skill_&quot;&amp;main_char.direction</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="944998228531535" type="main_char">
+                            <param id="0" name="Instance variable">attack</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="340423709989464" type="System">
+                            <param id="0" name="Group name">&quot;Player movement&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="830417626342666" title="change job">
+            <sub-events>
+                <event-block sid="149572656282066">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="894739893530567" type="Keyboard">
+                            <param id="0" name="Key">67 (C)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="790160488935603" type="System">
+                            <param id="0" name="Variable">job</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="134324755039509">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="674651464610055" type="System">
+                                    <param id="0" name="Variable">job</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="377313255713131" type="System">
+                                    <param id="0" name="Variable">job</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="123699385062426">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="179908455968339" type="System">
+                            <param id="0" name="Variable">job</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="836082256723167" type="main_char">
+                            <param id="0" name="Instance variable">job</param>
+                            <param id="1" name="Value">&quot;beginner&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="977075039310390">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="866002005552227" type="System">
+                            <param id="0" name="Variable">job</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="706336447452895" type="main_char">
+                            <param id="0" name="Instance variable">job</param>
+                            <param id="1" name="Value">&quot;cleric&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="143863767583342">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="515936623957771" type="System">
+                            <param id="0" name="Variable">job</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="814292670950238" type="main_char">
+                            <param id="0" name="Instance variable">job</param>
+                            <param id="1" name="Value">&quot;fighter&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="853101173142681">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="317569146353058" type="System">
+                            <param id="0" name="Variable">job</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="247301090237285" type="main_char">
+                            <param id="0" name="Instance variable">job</param>
+                            <param id="1" name="Value">&quot;knight&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="128814335804254">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="769077483278608" type="System">
+                            <param id="0" name="Variable">job</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="160355948159574" type="main_char">
+                            <param id="0" name="Instance variable">job</param>
+                            <param id="1" name="Value">&quot;warrior&quot;</param>
                         </action>
                     </actions>
                 </event-block>
