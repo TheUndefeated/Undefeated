@@ -74,7 +74,7 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="505294738660166" speed="5">
                     <frame duration="1" hotspotX="0.522936" hotspotY="0.653846" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\buat map\buildings_tiny_artwork_03_preview.jpg">
                         <collision-poly>
-                            <point x="0.527828" y="0.25641" />
+                            <point x="0.518654" y="0.032051" />
                             <point x="0.908257" y="0.413061" />
                             <point x="0.908257" y="0.897436" />
                             <point x="0.12477" y="0.891026" />
@@ -84,7 +84,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="main_char" sid="327038156562590">
+        <object-type global="1" name="main_char" sid="327038156562590">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="direction" sid="800783523171828" type="string" />
@@ -4920,6 +4920,113 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="collision" sid="758980564970640">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="574198622711396">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="670213165510299" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tilemap" sid="225593759962433">
+            <plugin id="Tilemap" />
+            <texture />
+            <tiles>
+                <tile id="12">
+                    <collision-poly>
+                        <point x="1" y="1" />
+                        <point x="1" y="0" />
+                        <point x="0.015625" y="0.0078125" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+            </tiles>
+        </object-type>
+        <object-type name="warp1" sid="323244121593082">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="647929848897357" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="dungeon_dirt" sid="526398624586123">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\5z1KX.png" />
+            <tiles />
+        </object-type>
+        <object-type name="texture_stone" sid="935402459369606">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\batu.png" />
+            <tiles />
+        </object-type>
+        <object-type name="blank_space" sid="504111720400984">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\sdsdsd.png" />
+            <tiles />
+        </object-type>
+        <object-type name="dungeon_wall" sid="166998777828733">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="403840982071224">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\smg.png" />
+            <tiles />
+        </object-type>
+        <object-type name="texture_green" sid="245038436476668">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\19ba32a65698a6b879ae0cff5dcf503b.png" />
+            <tiles />
+        </object-type>
+        <object-type name="dungeon_wall2" sid="415312326631275">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="229686631340283">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\smg.png" />
+            <tiles />
+        </object-type>
+        <object-type name="warp_dungeon_batu" sid="187983375837118">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="357817985264461" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="warp_town_dungeon_batu" sid="752864979061813">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820468315982861" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="225466533678119">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="761036044898672" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="return_home" sid="492856718751683">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399695987703297" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="MenuButton" plugin-id="Sprite" sid="910771097640765">
@@ -4941,12 +5048,14 @@
         </layout-folder>
         <layout-folder name="Game">
             <layout>game_play.xml</layout>
+            <layout>dungeon_batu.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
         <event-sheet>start_screen.xml</event-sheet>
         <event-sheet>game_play.xml</event-sheet>
         <event-sheet>setting_page.xml</event-sheet>
+        <event-sheet>dungeon.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="3" />
