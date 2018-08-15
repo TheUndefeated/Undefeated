@@ -49,41 +49,260 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Mouse" sid="538596895589564">
-            <plugin id="Mouse" />
-        </object-type>
-        <object-type name="Browser" sid="418252449397849">
-            <plugin id="Browser" />
-        </object-type>
-        <object-type name="Tilemap_town" sid="220246149144330">
-            <plugin id="Tilemap" />
-            <texture />
-            <tiles />
-        </object-type>
-        <object-type name="char_house" sid="544881961375584">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="468556455797733">
-                    <behavior id="solid" />
-                </behavior-type>
-                <behavior-type name="Physics" sid="886108284150036">
-                    <behavior id="Physics" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="505294738660166" speed="5">
-                    <frame duration="1" hotspotX="0.522936" hotspotY="0.653846" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\buat map\buildings_tiny_artwork_03_preview.jpg">
+        <object-folder name="Tilemap">
+            <object-type name="blank_space" sid="504111720400984">
+                <plugin id="Tilemap" />
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\sdsdsd.png" />
+                <tiles />
+            </object-type>
+            <object-type name="dungeon_dirt" sid="526398624586123">
+                <plugin id="Tilemap" />
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\5z1KX.png" />
+                <tiles />
+            </object-type>
+            <object-type name="dungeon_wall" sid="166998777828733">
+                <plugin id="Tilemap" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="403840982071224">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\smg.png" />
+                <tiles />
+            </object-type>
+            <object-type name="dungeon_wall2" sid="415312326631275">
+                <plugin id="Tilemap" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="229686631340283">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\smg.png" />
+                <tiles />
+            </object-type>
+            <object-type name="texture_green" sid="245038436476668">
+                <plugin id="Tilemap" />
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\19ba32a65698a6b879ae0cff5dcf503b.png" />
+                <tiles />
+            </object-type>
+            <object-type name="texture_stone" sid="935402459369606">
+                <plugin id="Tilemap" />
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\batu.png" />
+                <tiles />
+            </object-type>
+            <object-type name="Tilemap" sid="225593759962433">
+                <plugin id="Tilemap" />
+                <texture />
+                <tiles>
+                    <tile id="12">
                         <collision-poly>
-                            <point x="0.518654" y="0.032051" />
-                            <point x="0.908257" y="0.413061" />
-                            <point x="0.908257" y="0.897436" />
-                            <point x="0.12477" y="0.891026" />
-                            <point x="0.137615" y="0.403846" />
+                            <point x="1" y="1" />
+                            <point x="1" y="0" />
+                            <point x="0.015625" y="0.0078125" />
+                            <point x="0" y="1" />
                         </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
+                    </tile>
+                </tiles>
+            </object-type>
+            <object-type name="Tilemap12" sid="261847917588067">
+                <plugin id="Tilemap" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="648558919045144">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\6.png" />
+                <tiles />
+            </object-type>
+            <object-type name="Tilemap2" sid="264827216012446">
+                <plugin id="Tilemap" />
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\4.png" />
+                <tiles />
+            </object-type>
+            <object-type name="Tilemap3" sid="757887660993074">
+                <plugin id="Tilemap" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="381073189608150">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\5.png" />
+                <tiles />
+            </object-type>
+            <object-type name="Tilemap4" sid="477570224042692">
+                <plugin id="Tilemap" />
+                <texture />
+                <tiles />
+            </object-type>
+            <object-type name="Tilemap5" sid="720492592636506">
+                <plugin id="Tilemap" />
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\7.png" />
+                <tiles />
+            </object-type>
+            <object-type name="Tilemap6" sid="916068762425569">
+                <plugin id="Tilemap" />
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\8.png" />
+                <tiles />
+            </object-type>
+            <object-type name="Tilemap7" sid="719135410323986">
+                <plugin id="Tilemap" />
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\light_sand_template-680x382.jpg" />
+                <tiles />
+            </object-type>
+            <object-type name="Tilemap_town" sid="220246149144330">
+                <plugin id="Tilemap" />
+                <texture />
+                <tiles />
+            </object-type>
+        </object-folder>
+        <object-folder name="Control system">
+            <object-type name="Browser" sid="418252449397849">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Keyboard" sid="915726920616395">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Mouse" sid="538596895589564">
+                <plugin id="Mouse" />
+            </object-type>
+        </object-folder>
+        <object-folder name="collision object">
+            <object-type name="char_house" sid="544881961375584">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="468556455797733">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="886108284150036">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="505294738660166" speed="5">
+                        <frame duration="1" hotspotX="0.522936" hotspotY="0.653846" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\buat map\buildings_tiny_artwork_03_preview.jpg">
+                            <collision-poly>
+                                <point x="0.518654" y="0.032051" />
+                                <point x="0.908257" y="0.413061" />
+                                <point x="0.908257" y="0.897436" />
+                                <point x="0.12477" y="0.891026" />
+                                <point x="0.137615" y="0.403846" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="collision" sid="758980564970640">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="574198622711396">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="670213165510299" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="button sprite">
+            <object-type name="Exit" sid="187393816692541">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="162401720986546" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LoadGame" sid="374567487582240">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="255367651290531" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="NewGame" sid="643889976874862">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154145943907276" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Setting" sid="220519122535576">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668173389089020" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="warp">
+            <object-type name="return_home" sid="492856718751683">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399695987703297" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="warp1" sid="323244121593082">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="647929848897357" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="warp2" sid="758378926383776">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="warp_dungeon_batu" sid="187983375837118">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="357817985264461" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="warp_dungeon_hijau_1" sid="300828158976199">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="warp_dungeon_hijau_2" sid="615281764208984">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="warp_town_dungeon_batu" sid="752864979061813">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820468315982861" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="image">
+            <object-type name="ExitButton" sid="275176417520145">
+                <plugin id="TiledBg" />
+                <texture original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\button start screen\exit button.png" />
+            </object-type>
+            <object-type name="GameMenu" sid="132579541667822">
+                <plugin id="TiledBg" />
+                <texture original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\button start screen\button new game sama load game with text.png" />
+            </object-type>
+            <object-type name="MainBackground" sid="555019405685287">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\pingk\Downloads\bg.jpg" />
+            </object-type>
+            <object-type name="SettingButton" sid="284829789146303">
+                <plugin id="TiledBg" />
+                <texture original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\button start screen\setting button.png" />
+            </object-type>
+        </object-folder>
         <object-type global="1" name="main_char" sid="327038156562590">
             <plugin id="Sprite" />
             <instance-variables>
@@ -4869,220 +5088,335 @@
                 </animation-folder>
             </animation-folder>
         </object-type>
-        <object-type name="Keyboard" sid="915726920616395">
-            <plugin id="Keyboard" />
-        </object-type>
-        <object-type name="MainBackground" sid="555019405685287">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\pingk\Downloads\bg.jpg" />
-        </object-type>
-        <object-type name="GameMenu" sid="132579541667822">
-            <plugin id="TiledBg" />
-            <texture original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\button start screen\button new game sama load game with text.png" />
-        </object-type>
-        <object-type name="SettingButton" sid="284829789146303">
-            <plugin id="TiledBg" />
-            <texture original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\button start screen\setting button.png" />
-        </object-type>
-        <object-type name="ExitButton" sid="275176417520145">
-            <plugin id="TiledBg" />
-            <texture original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\button start screen\exit button.png" />
-        </object-type>
-        <object-type name="NewGame" sid="643889976874862">
+        <object-type name="scorpion" sid="935006853956449">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154145943907276" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="scorpion_face_front" pingpong="0" repeatcount="1" repeatto="0" sid="108663737139264" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.65625" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
+                        <collision-poly>
+                            <point x="0.391667" y="0.101563" />
+                            <point x="0.5" y="0.03125" />
+                            <point x="0.658333" y="0.109375" />
+                            <point x="0.8" y="0.5" />
+                            <point x="1" y="0.835938" />
+                            <point x="0.5" y="0.90625" />
+                            <point x="0" y="0.773438" />
+                            <point x="0.2" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="scorpion_face_back" pingpong="0" repeatcount="1" repeatto="0" sid="936634323156042" speed="5">
+                    <frame duration="1" hotspotX="0.483871" hotspotY="0.387097" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
+                        <collision-poly>
+                            <point x="0.0967742" y="0.0967742" />
+                            <point x="0.483871" y="0.193548" />
+                            <point x="0.991935" y="0.16129" />
+                            <point x="0.870968" y="0.483871" />
+                            <point x="0.806452" y="0.806452" />
+                            <point x="0.483871" y="0.903226" />
+                            <point x="0.193548" y="0.806452" />
+                            <point x="0.129032" y="0.483871" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="scorpion_face_left" pingpong="0" repeatcount="1" repeatto="0" sid="880059087402708" speed="5">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.551724" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
+                        <collision-poly>
+                            <point x="0.296875" y="0.206897" />
+                            <point x="0.546875" y="0.353448" />
+                            <point x="0.820313" y="0.0517241" />
+                            <point x="1" y="0.482759" />
+                            <point x="0.84375" y="0.827586" />
+                            <point x="0.5" y="0.931035" />
+                            <point x="0" y="0.862069" />
+                            <point x="0.09375" y="0.353448" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="scorpion_face_right" pingpong="0" repeatcount="1" repeatto="0" sid="193699763591047" speed="5">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.464286" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
+                        <collision-poly>
+                            <point x="0.101563" y="0.0178571" />
+                            <point x="0.289063" y="0.0625" />
+                            <point x="0.4375" y="0.276786" />
+                            <point x="0.929688" y="0.214286" />
+                            <point x="1" y="0.8125" />
+                            <point x="0.601563" y="0.9375" />
+                            <point x="0.1875" y="0.785714" />
+                            <point x="0" y="0.517857" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="scorpion_walk_front" pingpong="0" repeatcount="1" repeatto="0" sid="273740871803725" speed="5">
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.625" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
+                        <collision-poly>
+                            <point x="0.351563" y="0.0882353" />
+                            <point x="0.5" y="0.0588235" />
+                            <point x="0.617188" y="0.110294" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="1" y="0.849724" />
+                            <point x="0.5" y="0.941176" />
+                            <point x="0" y="0.826287" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.647059" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
+                        <collision-poly>
+                            <point x="0.351563" y="0.0882353" />
+                            <point x="0.5" y="0.0588235" />
+                            <point x="0.617188" y="0.110294" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="0.9375" y="0.742647" />
+                            <point x="0.5" y="0.941176" />
+                            <point x="0.0546875" y="0.779412" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="scorpion_walk_back" pingpong="0" repeatcount="1" repeatto="0" sid="890884618551737" speed="5">
+                    <frame duration="1" hotspotX="0.516129" hotspotY="0.37037" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
+                        <collision-poly>
+                            <point x="0.145161" y="0.0648148" />
+                            <point x="0.483871" y="0.0740741" />
+                            <point x="0.870968" y="0.0462963" />
+                            <point x="0.975806" y="0.342593" />
+                            <point x="0.806452" y="0.777778" />
+                            <point x="0.483871" y="0.962963" />
+                            <point x="0.193548" y="0.777778" />
+                            <point x="2.98023e-008" y="0.240741" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.392857" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
+                        <collision-poly>
+                            <point x="0.205357" y="0.116071" />
+                            <point x="0.5" y="0.178571" />
+                            <point x="0.848214" y="0.0267857" />
+                            <point x="1" y="0.169643" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="0.964286" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.241072" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="scorpion_walk_left" pingpong="0" repeatcount="1" repeatto="0" sid="215286993700127" speed="5">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.571429" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.25" />
+                            <point x="0.5" y="0.357143" />
+                            <point x="0.757813" y="0" />
+                            <point x="1" y="0.392857" />
+                            <point x="0.945313" y="0.75" />
+                            <point x="0.484375" y="1" />
+                            <point x="0" y="0.892857" />
+                            <point x="0.03125" y="0.392857" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.52" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.2" />
+                            <point x="0.5" y="0.24" />
+                            <point x="0.796875" y="0" />
+                            <point x="1" y="0.34" />
+                            <point x="0.96875" y="0.75" />
+                            <point x="0.460938" y="1" />
+                            <point x="0.078125" y="0.91" />
+                            <point x="0" y="0.34" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="scorpion_walk_right" pingpong="0" repeatcount="1" repeatto="0" sid="983330912764326" speed="5">
+                    <frame duration="1" hotspotX="0.548387" hotspotY="0.551724" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
+                        <collision-poly>
+                            <point x="0.0967742" y="0.103448" />
+                            <point x="0.282258" y="0.0775862" />
+                            <point x="0.475806" y="0.387931" />
+                            <point x="0.774194" y="0.241379" />
+                            <point x="0.983871" y="0.405172" />
+                            <point x="0.943548" y="0.887931" />
+                            <point x="0.483871" y="0.931035" />
+                            <point x="0.193548" y="0.793103" />
+                            <point x="0" y="0.491379" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.484848" hotspotY="0.538462" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
+                        <collision-poly>
+                            <point x="0.0984849" y="0.0576923" />
+                            <point x="0.306818" y="0.0673077" />
+                            <point x="0.515152" y="0.346154" />
+                            <point x="0.780303" y="0.192308" />
+                            <point x="0.984848" y="0.365385" />
+                            <point x="0.878788" y="0.961538" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0606061" y="0.769231" />
+                            <point x="0" y="0.471154" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="LoadGame" sid="374567487582240">
+        <object-type name="forestMouse" sid="921016025448488">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="255367651290531" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="mouse_face_front" pingpong="0" repeatcount="1" repeatto="0" sid="329156977840226" speed="5">
+                    <frame duration="1" hotspotX="0.454545" hotspotY="0.612903" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
+                        <collision-poly>
+                            <point x="0.306818" y="0.346774" />
+                            <point x="0.420455" y="0.104839" />
+                            <point x="0.5" y="0.314516" />
+                            <point x="0.761364" y="0.548387" />
+                            <point x="0.681818" y="0.774194" />
+                            <point x="0.5" y="0.903226" />
+                            <point x="0.227273" y="0.83871" />
+                            <point x="0.0681818" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="mouse_face_back" pingpong="0" repeatcount="1" repeatto="0" sid="157927590117044" speed="5">
+                    <frame duration="1" hotspotX="0.473684" hotspotY="0.357143" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
+                        <collision-poly>
+                            <point x="0.210526" y="0.142857" />
+                            <point x="0.473684" y="0.142857" />
+                            <point x="0.671053" y="0.107143" />
+                            <point x="0.789474" y="0.5" />
+                            <point x="0.736842" y="0.821429" />
+                            <point x="0.473684" y="0.964286" />
+                            <point x="0.105263" y="0.821429" />
+                            <point x="0.105263" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="mouse_face_left" pingpong="0" repeatcount="1" repeatto="0" sid="829372832450826" speed="5">
+                    <frame duration="1" hotspotX="0.354839" hotspotY="0.52381" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
+                        <collision-poly>
+                            <point x="0.0483871" y="0.5" />
+                            <point x="0.274194" y="0.166667" />
+                            <point x="0.677419" y="0.47619" />
+                            <point x="0.677419" y="0.47619" />
+                            <point x="0.975806" y="0.607143" />
+                            <point x="0.604839" y="0.988095" />
+                            <point x="0.25" y="0.738095" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="mouse_face_right" pingpong="0" repeatcount="1" repeatto="0" sid="607515194996759" speed="5">
+                    <frame duration="1" hotspotX="0.689655" hotspotY="0.473684" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
+                        <collision-poly>
+                            <point x="0.310345" y="0.473684" />
+                            <point x="0.482759" y="0.315789" />
+                            <point x="0.784483" y="0.144737" />
+                            <point x="1" y="0.473684" />
+                            <point x="0.793103" y="0.776316" />
+                            <point x="0.482759" y="0.947368" />
+                            <point x="0.137931" y="0.789474" />
+                            <point x="0.0689655" y="0.473684" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="mouse_walk_front" pingpong="0" repeatcount="1" repeatto="0" sid="247744548017653" speed="5">
+                    <frame duration="1" hotspotX="0.444444" hotspotY="0.607143" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
+                        <collision-poly>
+                            <point x="0.291667" y="0.276786" />
+                            <point x="0.444444" y="0.0267857" />
+                            <point x="0.611111" y="0.3125" />
+                            <point x="0.888889" y="0.5" />
+                            <point x="0.777778" y="0.946429" />
+                            <point x="0.5" y="0.928571" />
+                            <point x="0.180556" y="0.964286" />
+                            <point x="0.0555556" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.473684" hotspotY="0.689655" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
+                        <collision-poly>
+                            <point x="0.355263" y="0.344828" />
+                            <point x="0.605263" y="0.0603448" />
+                            <point x="0.618421" y="0.344828" />
+                            <point x="0.894737" y="0.482759" />
+                            <point x="0.789474" y="0.862069" />
+                            <point x="0.473684" y="0.965517" />
+                            <point x="0.210526" y="0.862069" />
+                            <point x="0.105263" y="0.482759" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="mouse_walk_back" pingpong="0" repeatcount="1" repeatto="0" sid="685039810368116" speed="5">
+                    <frame duration="1" hotspotX="0.4375" hotspotY="0.307692" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.115385" />
+                            <point x="0.8125" y="0.115385" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.625" y="0.769231" />
+                            <point x="0.5" y="0.961538" />
+                            <point x="0.3125" y="0.807692" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.473684" hotspotY="0.238095" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
+                        <collision-poly>
+                            <point x="0.223684" y="0.0833333" />
+                            <point x="0.473684" y="0.0952381" />
+                            <point x="0.763158" y="0.0595238" />
+                            <point x="0.894737" y="0.47619" />
+                            <point x="0.736842" y="0.761905" />
+                            <point x="0.473684" y="0.904762" />
+                            <point x="0.263158" y="0.761905" />
+                            <point x="0.105263" y="0.47619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="mouse_walk_left" pingpong="0" repeatcount="1" repeatto="0" sid="148067354753638" speed="5">
+                    <frame duration="1" hotspotX="0.357143" hotspotY="0.625" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
+                        <collision-poly>
+                            <point x="0.107143" y="0.1875" />
+                            <point x="0.5" y="0.1875" />
+                            <point x="0.714286" y="0.5" />
+                            <point x="0.964286" y="0.5" />
+                            <point x="0.857143" y="0.75" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.107143" y="0.8125" />
+                            <point x="0.0357143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.344828" hotspotY="0.5625" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
+                        <collision-poly>
+                            <point x="0.137931" y="0.25" />
+                            <point x="0.482759" y="0.1875" />
+                            <point x="0.724138" y="0.5" />
+                            <point x="0.965517" y="0.5" />
+                            <point x="0.862069" y="0.75" />
+                            <point x="0.482759" y="0.9375" />
+                            <point x="0.103448" y="0.8125" />
+                            <point x="0.0689655" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="mouse_walk_right" pingpong="0" repeatcount="1" repeatto="0" sid="687351042103131" speed="5">
+                    <frame duration="1" hotspotX="0.642857" hotspotY="0.571429" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
+                        <collision-poly>
+                            <point x="0.178571" y="0.357143" />
+                            <point x="0.5" y="0.0714286" />
+                            <point x="0.892857" y="0.214286" />
+                            <point x="1" y="0.5" />
+                            <point x="0.892857" y="0.785714" />
+                            <point x="0.5" y="0.928571" />
+                            <point x="0.142857" y="0.714286" />
+                            <point x="0.0357143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.655172" hotspotY="0.5" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
+                        <collision-poly>
+                            <point x="0.275862" y="0.571429" />
+                            <point x="0.482759" y="0.0714286" />
+                            <point x="0.862069" y="0.285714" />
+                            <point x="0.965517" y="0.5" />
+                            <point x="0.896552" y="0.785714" />
+                            <point x="0.482759" y="0.928571" />
+                            <point x="0.137931" y="0.714286" />
+                            <point x="0.0344828" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="Exit" sid="187393816692541">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="162401720986546" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Setting" sid="220519122535576">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668173389089020" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="collision" sid="758980564970640">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="574198622711396">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="670213165510299" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Tilemap" sid="225593759962433">
-            <plugin id="Tilemap" />
-            <texture />
-            <tiles>
-                <tile id="12">
-                    <collision-poly>
-                        <point x="1" y="1" />
-                        <point x="1" y="0" />
-                        <point x="0.015625" y="0.0078125" />
-                        <point x="0" y="1" />
-                    </collision-poly>
-                </tile>
-            </tiles>
-        </object-type>
-        <object-type name="warp1" sid="323244121593082">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="647929848897357" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="dungeon_dirt" sid="526398624586123">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\5z1KX.png" />
-            <tiles />
-        </object-type>
-        <object-type name="texture_stone" sid="935402459369606">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\batu.png" />
-            <tiles />
-        </object-type>
-        <object-type name="blank_space" sid="504111720400984">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\sdsdsd.png" />
-            <tiles />
-        </object-type>
-        <object-type name="dungeon_wall" sid="166998777828733">
-            <plugin id="Tilemap" />
-            <behaviors>
-                <behavior-type name="Solid" sid="403840982071224">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\smg.png" />
-            <tiles />
-        </object-type>
-        <object-type name="texture_green" sid="245038436476668">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\19ba32a65698a6b879ae0cff5dcf503b.png" />
-            <tiles />
-        </object-type>
-        <object-type name="dungeon_wall2" sid="415312326631275">
-            <plugin id="Tilemap" />
-            <behaviors>
-                <behavior-type name="Solid" sid="229686631340283">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat map\smg.png" />
-            <tiles />
-        </object-type>
-        <object-type name="warp_dungeon_batu" sid="187983375837118">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="357817985264461" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="warp_town_dungeon_batu" sid="752864979061813">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820468315982861" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite" sid="225466533678119">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="761036044898672" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="return_home" sid="492856718751683">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399695987703297" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Tilemap12" sid="261847917588067">
-            <plugin id="Tilemap" />
-            <behaviors>
-                <behavior-type name="Solid" sid="648558919045144">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\6.png" />
-            <tiles />
-        </object-type>
-        <object-type name="warp2" sid="758378926383776">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="Tilemap2" sid="264827216012446">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\4.png" />
-            <tiles />
-        </object-type>
-        <object-type name="Tilemap3" sid="757887660993074">
-            <plugin id="Tilemap" />
-            <behaviors>
-                <behavior-type name="Solid" sid="381073189608150">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\5.png" />
-            <tiles />
-        </object-type>
-        <object-type name="warp_dungeon_hijau_1" sid="300828158976199">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="warp_dungeon_hijau_2" sid="615281764208984">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="Tilemap4" sid="477570224042692">
-            <plugin id="Tilemap" />
-            <texture />
-            <tiles />
-        </object-type>
-        <object-type name="Tilemap5" sid="720492592636506">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\7.png" />
-            <tiles />
-        </object-type>
-        <object-type name="Tilemap6" sid="916068762425569">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\8.png" />
-            <tiles />
-        </object-type>
-        <object-type name="Tilemap7" sid="719135410323986">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\light_sand_template-680x382.jpg" />
-            <tiles />
         </object-type>
     </object-folder>
     <families>
@@ -5096,6 +5430,12 @@
             <instance-variables>
                 <instance-variable name="Destination" sid="130982696618833" type="string" />
             </instance-variables>
+        </family>
+        <family name="Enemies" plugin-id="Sprite" sid="696694052684303">
+            <members>
+                <member>forestMouse</member>
+                <member>scorpion</member>
+            </members>
         </family>
     </families>
     <layout-folder>
@@ -5114,7 +5454,6 @@
         <event-sheet>game_play.xml</event-sheet>
         <event-sheet>setting_page.xml</event-sheet>
         <event-sheet>dungeon.xml</event-sheet>
-        <event-sheet>dungeonhijau.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="3" />
