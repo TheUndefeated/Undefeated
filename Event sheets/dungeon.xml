@@ -11,18 +11,14 @@
                     </conditions>
                     <actions>
                         <action id="-4" name="Set position to another object" sid="282306074424610" type="main_char">
-                            <param id="0" name="Object">warp_dungeon_batu</param>
+                            <param id="0" name="Object">warp_dungeon_batu1</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
                         <action id="-26" name="Move to layer" sid="210653295625565" type="main_char">
                             <param id="0" name="Layer">2</param>
                         </action>
-                        <action id="-10" name="Set value" sid="180959037638013" type="main_char">
-                            <param id="0" name="Instance variable">direction</param>
-                            <param id="1" name="Value">direction</param>
-                        </action>
                         <action id="4" name="Set animation" sid="894306898218547" type="main_char">
-                            <param id="0" name="Animation">main_char.job&amp;&quot;_face_&quot;&amp;direction</param>
+                            <param id="0" name="Animation">main_char.job&amp;&quot;_face_&quot;&amp;main_char.direction</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -36,12 +32,29 @@
                             <param id="0" name="Object">warp_dungeon_hijau_1</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="101982216137971" type="main_char">
-                            <param id="0" name="Instance variable">direction</param>
-                            <param id="1" name="Value">direction</param>
+                        <action id="-26" name="Move to layer" sid="148926582361919" type="main_char">
+                            <param id="0" name="Layer">2</param>
                         </action>
-                        <action id="4" name="Set animation" sid="301992158701737" type="main_char">
-                            <param id="0" name="Animation">main_char.job&amp;&quot;_face_&quot;&amp;direction</param>
+                        <action id="4" name="Set animation" sid="712521748434954" type="main_char">
+                            <param id="0" name="Animation">main_char.job&amp;&quot;_face_&quot;&amp;main_char.direction</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="986450893417877">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="722572464642491" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="873720838636825" type="main_char">
+                            <param id="0" name="Object">warp_dungeon_es1</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="662623592095520" type="main_char">
+                            <param id="0" name="Layer">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="876237365296290" type="main_char">
+                            <param id="0" name="Animation">main_char.job&amp;&quot;_face_&quot;&amp;main_char.direction</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -68,10 +81,6 @@
                         <action behavior="8Direction" id="7" name="Simulate control" sid="136779171606330" type="main_char">
                             <param id="0" name="Control">2</param>
                         </action>
-                        <action id="-9" name="Set value" sid="710811032939897" type="System">
-                            <param id="0" name="Variable">direction</param>
-                            <param id="1" name="Value">main_char.direction</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="512308246941391">
@@ -91,10 +100,6 @@
                         </action>
                         <action behavior="8Direction" id="7" name="Simulate control" sid="955824567598259" type="main_char">
                             <param id="0" name="Control">3</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="702787360878868" type="System">
-                            <param id="0" name="Variable">direction</param>
-                            <param id="1" name="Value">main_char.direction</param>
                         </action>
                     </actions>
                 </event-block>
@@ -116,10 +121,6 @@
                         <action behavior="8Direction" id="7" name="Simulate control" sid="177283522720745" type="main_char">
                             <param id="0" name="Control">0</param>
                         </action>
-                        <action id="-9" name="Set value" sid="417211393886954" type="System">
-                            <param id="0" name="Variable">direction</param>
-                            <param id="1" name="Value">main_char.direction</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="179066978535167">
@@ -139,10 +140,6 @@
                         </action>
                         <action behavior="8Direction" id="7" name="Simulate control" sid="245263354126679" type="main_char">
                             <param id="0" name="Control">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="687228516606821" type="System">
-                            <param id="0" name="Variable">direction</param>
-                            <param id="1" name="Value">main_char.direction</param>
                         </action>
                     </actions>
                 </event-block>
@@ -457,7 +454,7 @@
                         <event-block sid="885092304542531">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="882640804098988" type="Keyboard">
-                                    <param id="0" name="Key">16 (Shift)</param>
+                                    <param id="0" name="Key">69 (E)</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -471,7 +468,7 @@
                 <event-block sid="681584160602471">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="998092586711971" type="main_char">
-                            <param id="0" name="Object">warp_town_dungeon_batu</param>
+                            <param id="0" name="Object">warp_dungeon_batu2</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -479,11 +476,33 @@
                         <event-block sid="503638326644340">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="723550269536962" type="Keyboard">
-                                    <param id="0" name="Key">16 (Shift)</param>
+                                    <param id="0" name="Key">69 (E)</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-25" name="Go to layout (by name)" sid="353695366942584" type="System">
+                                    <param id="0" name="Layout">&quot;game_play&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="508872951772818">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="412805614049893" type="main_char">
+                            <param id="0" name="Object">warp_dungeon_es2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="250674812504885">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="587819423784063" type="Keyboard">
+                                    <param id="0" name="Key">69 (E)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="953928019819550" type="System">
                                     <param id="0" name="Layout">&quot;game_play&quot;</param>
                                 </action>
                             </actions>
