@@ -154,6 +154,21 @@
                 <texture />
                 <tiles />
             </object-type>
+            <object-type name="Tilemap10" sid="243811157346468">
+                <plugin id="Tilemap" />
+                <texture original-source="D:\KULIAH\MATKUL\CAWU 3\software engineering\project software engineering\progress\referensi\buat map\maxresdefault.png" />
+                <tiles />
+            </object-type>
+            <object-type name="Tilemap8" sid="694297273757618">
+                <plugin id="Tilemap" />
+                <texture original-source="D:\KULIAH\MATKUL\CAWU 3\software engineering\project software engineering\progress\referensi\buat map\maxresdefault.png" />
+                <tiles />
+            </object-type>
+            <object-type name="Tilemap9" sid="962060054880989">
+                <plugin id="Tilemap" />
+                <texture original-source="D:\KULIAH\MATKUL\CAWU 3\software engineering\project software engineering\progress\referensi\buat map\xi8fxwC.png" />
+                <tiles />
+            </object-type>
         </object-folder>
         <object-folder name="Control system">
             <object-type name="Browser" sid="418252449397849">
@@ -5447,6 +5462,7 @@
             <layout>game_play.xml</layout>
             <layout>dungeon_batu.xml</layout>
             <layout>dungeon_hijau.xml</layout>
+            <layout>dungeon_es.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
