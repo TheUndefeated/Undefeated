@@ -3,25 +3,51 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>dungeon</name>
     <events>
-        <event-block sid="650300433815121">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="706085353722707" type="System" />
-            </conditions>
-            <actions>
-                <action id="-4" name="Set position to another object" sid="282306074424610" type="main_char">
-                    <param id="0" name="Object">warp_dungeon_batu</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-                <action id="-10" name="Set value" sid="180959037638013" type="main_char">
-                    <param id="0" name="Instance variable">direction</param>
-                    <param id="1" name="Value">direction</param>
-                </action>
-                <action id="4" name="Set animation" sid="894306898218547" type="main_char">
-                    <param id="0" name="Animation">main_char.job&amp;&quot;_face_&quot;&amp;direction</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="173589268136389" title="Arrival control">
+            <sub-events>
+                <event-block sid="650300433815121">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="706085353722707" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="282306074424610" type="main_char">
+                            <param id="0" name="Object">warp_dungeon_batu</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="210653295625565" type="main_char">
+                            <param id="0" name="Layer">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="180959037638013" type="main_char">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Value">direction</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="894306898218547" type="main_char">
+                            <param id="0" name="Animation">main_char.job&amp;&quot;_face_&quot;&amp;direction</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="759984880151425">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="777147342849445" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="381541813109921" type="main_char">
+                            <param id="0" name="Object">warp_dungeon_hijau_1</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="101982216137971" type="main_char">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Value">direction</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="301992158701737" type="main_char">
+                            <param id="0" name="Animation">main_char.job&amp;&quot;_face_&quot;&amp;direction</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="383555927504873" title="Player movement">
             <sub-events>
                 <event-block sid="942837025927448">
@@ -418,27 +444,53 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="681584160602471">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="998092586711971" type="main_char">
-                    <param id="0" name="Object">warp_town_dungeon_batu</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="230024369513117" title="Leaving control">
             <sub-events>
-                <event-block sid="503638326644340">
+                <event-block sid="653834206182300">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="723550269536962" type="Keyboard">
-                            <param id="0" name="Key">16 (Shift)</param>
+                        <condition id="1" name="Is overlapping another object" sid="652032495683449" type="main_char">
+                            <param id="0" name="Object">warp_dungeon_hijau_2</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-25" name="Go to layout (by name)" sid="353695366942584" type="System">
-                            <param id="0" name="Layout">&quot;game_play&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="885092304542531">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="882640804098988" type="Keyboard">
+                                    <param id="0" name="Key">16 (Shift)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="827710442500379" type="System">
+                                    <param id="0" name="Layout">&quot;game_play&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="681584160602471">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="998092586711971" type="main_char">
+                            <param id="0" name="Object">warp_town_dungeon_batu</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="503638326644340">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="723550269536962" type="Keyboard">
+                                    <param id="0" name="Key">16 (Shift)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="353695366942584" type="System">
+                                    <param id="0" name="Layout">&quot;game_play&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>
