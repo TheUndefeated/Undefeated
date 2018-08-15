@@ -23,10 +23,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="tabrak" />
+    <active-layer name="character" />
     <layers>
         <layer locked="1" name="floor" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="tabrak" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="barang2" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="tabrak" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="barang2" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="character" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

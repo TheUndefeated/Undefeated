@@ -3,6 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>start_screen</name>
     <events>
+        <variable constant="0" name="prev_sfx" sid="517269130806663" static="0" type="number">0</variable>
+        <variable constant="0" name="prev_music" sid="647401257497882" static="0" type="number">0</variable>
+        <variable constant="0" name="sfx" sid="598644500177717" static="0" type="number">0</variable>
+        <variable constant="0" name="music" sid="201878347785065" static="0" type="number">0</variable>
         <event-block sid="658813376468180">
             <conditions>
                 <condition id="7" name="Cursor is over object" sid="680231713378448" type="Mouse">
@@ -66,7 +70,67 @@
                         <action id="0" name="Set cursor style" sid="232793992334313" type="Mouse">
                             <param id="0" name="Cursor style">0</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="641512806003663" type="System">
+                            <param id="0" name="Layer">&quot;Option&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="231825953505105" type="button_apply">
+                            <param id="0" name="Object">option_background</param>
+                            <param id="1" name="Image point (optional)">3</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="772770042510934" type="button_cancel">
+                            <param id="0" name="Object">option_background</param>
+                            <param id="1" name="Image point (optional)">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="678367077028774" type="System">
+                            <param id="0" name="Variable">prev_music</param>
+                            <param id="1" name="Value">music</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="950492780139654" type="System">
+                            <param id="0" name="Variable">prev_sfx</param>
+                            <param id="1" name="Value">sfx</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="319856826372545">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="272761698696975" type="System">
+                                    <param id="0" name="Variable">music</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="110807029494324" type="music_icon">
+                                    <param id="0" name="Animation">&quot;off&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="881966621728422" type="music_icon">
+                                    <param id="0" name="Object">option_background</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="761679407884079">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="390825540628942" type="System">
+                                    <param id="0" name="Variable">sfx</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="112154902114983" type="sfx_icon">
+                                    <param id="0" name="Animation">&quot;off&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="444011856040233" type="sfx_icon">
+                                    <param id="0" name="Object">option_background</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="598507380588076">
                     <conditions>
@@ -94,6 +158,154 @@
                     <actions>
                         <action id="0" name="Set cursor style" sid="422191884568346" type="Mouse">
                             <param id="0" name="Cursor style">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="110505877942094">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="703004781366762" type="System">
+                    <param id="0" name="Layer">&quot;Option&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="854477608037677">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="914765635714003" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">music_icon</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="524174763037028">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="315124186826703" type="System">
+                                    <param id="0" name="Variable">music</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="880124190232545" type="System">
+                                    <param id="0" name="Variable">music</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="976233211918030" type="music_icon">
+                                    <param id="0" name="Animation">&quot;on&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="504758943456020">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="546650514960793" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="576072363242143" type="System">
+                                    <param id="0" name="Variable">music</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="306051433193222" type="music_icon">
+                                    <param id="0" name="Animation">&quot;off&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="423901445291863">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="425340374641889" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">sfx_icon</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="138333252720961">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="197483671039780" type="System">
+                                    <param id="0" name="Variable">sfx</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="398304796265349" type="System">
+                                    <param id="0" name="Variable">sfx</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="459418392639886" type="sfx_icon">
+                                    <param id="0" name="Animation">&quot;on&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="600442395800600">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="381779423594890" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="829027702897592" type="System">
+                                    <param id="0" name="Variable">sfx</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="311897721832332" type="sfx_icon">
+                                    <param id="0" name="Animation">&quot;off&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="817049391458576">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="786213025828682" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">button_apply</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="434044291464305" type="System">
+                            <param id="0" name="Variable">prev_music</param>
+                            <param id="1" name="Value">music</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="361296419083155" type="System">
+                            <param id="0" name="Variable">prev_sfx</param>
+                            <param id="1" name="Value">sfx</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="425680797522726" type="System">
+                            <param id="0" name="Layer">&quot;Option&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="113143058987344">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="189085086743372" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">button_cancel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="848669106495513" type="System">
+                            <param id="0" name="Variable">music</param>
+                            <param id="1" name="Value">prev_music</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="587240977152025" type="System">
+                            <param id="0" name="Variable">sfx</param>
+                            <param id="1" name="Value">prev_sfx</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="835150262044906" type="System">
+                            <param id="0" name="Layer">&quot;Option&quot;</param>
+                            <param id="1" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
