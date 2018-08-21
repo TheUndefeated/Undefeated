@@ -995,13 +995,11 @@
                     </properties>
                     <instance-variables>
                         <direction></direction>
+                        <level>5</level>
                         <health>0</health>
                         <energy>0</energy>
                         <damage>0</damage>
                         <defense>0</defense>
-                        <STR>10</STR>
-                        <AGI>10</AGI>
-                        <INT>10</INT>
                         <job></job>
                         <attack>false</attack>
                     </instance-variables>
