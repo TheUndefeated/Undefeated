@@ -413,6 +413,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="warp_hunting_zone" sid="895636374052709">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="644348047669012" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="image">
             <object-type name="ExitButton" sid="275176417520145">
@@ -5744,9 +5752,39 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="335904763636554" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0.423077" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.424" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Tilemap6" sid="382183950449376">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\light_sand_template-680x382.jpg" />
+            <tiles />
+        </object-type>
+        <object-type name="Tilemap11" sid="293395766640548">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="642481433074849">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\11.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Tilemap7" sid="147593685031469">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="373478308312328">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\10.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Tilemap13" sid="842831879018571">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\kaktus.png" />
+            <tiles />
         </object-type>
     </object-folder>
     <families>
@@ -5801,12 +5839,14 @@
             <layout>dungeon_batu.xml</layout>
             <layout>dungeon_hijau.xml</layout>
             <layout>dungeon_es.xml</layout>
+            <layout>hunting_zone.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
         <event-sheet>start_screen.xml</event-sheet>
         <event-sheet>game_play.xml</event-sheet>
         <event-sheet>dungeon.xml</event-sheet>
+        <event-sheet>hunting_zone.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="3" />
