@@ -12,7 +12,6 @@
     <used-plugins>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -20,6 +19,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -459,7 +459,7 @@
             <object-type name="fish" sid="813102940648178">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="fish_face_front" pingpong="0" repeatcount="1" repeatto="0" sid="253154025580178" speed="5">
+                    <animation framecount="1" loop="0" name="face_front" pingpong="0" repeatcount="1" repeatto="0" sid="253154025580178" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.575758" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\iguana sprite.png">
                             <collision-poly>
                                 <point x="0.1875" y="0.181818" />
@@ -473,7 +473,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="fish_face_back" pingpong="0" repeatcount="1" repeatto="0" sid="845522201889082" speed="5">
+                    <animation framecount="1" loop="0" name="face_back" pingpong="0" repeatcount="1" repeatto="0" sid="845522201889082" speed="5">
                         <frame duration="1" hotspotX="0.466667" hotspotY="0.515152" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\iguana sprite.png">
                             <collision-poly>
                                 <point x="0.2" y="0.181818" />
@@ -487,7 +487,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="fish_face_left" pingpong="0" repeatcount="1" repeatto="0" sid="892271777705487" speed="5">
+                    <animation framecount="1" loop="0" name="face_left" pingpong="0" repeatcount="1" repeatto="0" sid="892271777705487" speed="5">
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.516129" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\iguana sprite.png">
                             <collision-poly>
                                 <point x="0.181818" y="0.193548" />
@@ -501,7 +501,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="fish_face_right" pingpong="0" repeatcount="1" repeatto="0" sid="951057793659206" speed="5">
+                    <animation framecount="1" loop="0" name="face_right" pingpong="0" repeatcount="1" repeatto="0" sid="951057793659206" speed="5">
                         <frame duration="1" hotspotX="0.741935" hotspotY="0.548387" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\iguana sprite.png">
                             <collision-poly>
                                 <point x="0.290323" y="0.290323" />
@@ -514,7 +514,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="fish_walk_front" pingpong="0" repeatcount="1" repeatto="0" sid="643165740719973" speed="5">
+                    <animation framecount="2" loop="0" name="walk_front" pingpong="0" repeatcount="1" repeatto="0" sid="643165740719973" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.612903" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\iguana sprite.png">
                             <collision-poly>
                                 <point x="0.1875" y="0.193548" />
@@ -540,7 +540,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="fish_walk_back" pingpong="0" repeatcount="1" repeatto="0" sid="660209168341908" speed="5">
+                    <animation framecount="2" loop="0" name="walk_back" pingpong="0" repeatcount="1" repeatto="0" sid="660209168341908" speed="5">
                         <frame duration="1" hotspotX="0.533333" hotspotY="0.516129">
                             <collision-poly>
                                 <point x="0.2" y="0.193548" />
@@ -566,7 +566,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="fish_walk_left" pingpong="0" repeatcount="1" repeatto="0" sid="557776815083269" speed="5">
+                    <animation framecount="2" loop="0" name="walk_left" pingpong="0" repeatcount="1" repeatto="0" sid="557776815083269" speed="5">
                         <frame duration="1" hotspotX="0.3" hotspotY="0.516129">
                             <collision-poly>
                                 <point x="0.2" y="0.193548" />
@@ -592,7 +592,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="fish_walk_right" pingpong="0" repeatcount="1" repeatto="0" sid="394564840262052" speed="5">
+                    <animation framecount="2" loop="0" name="walk_right" pingpong="0" repeatcount="1" repeatto="0" sid="394564840262052" speed="5">
                         <frame duration="1" hotspotX="0.727273" hotspotY="0.566667">
                             <collision-poly>
                                 <point x="0.484848" y="0.0666667" />
@@ -621,7 +621,7 @@
             <object-type name="forestMouse" sid="921016025448488">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="mouse_face_front" pingpong="0" repeatcount="1" repeatto="0" sid="329156977840226" speed="5">
+                    <animation framecount="1" loop="0" name="face_front" pingpong="0" repeatcount="1" repeatto="0" sid="329156977840226" speed="5">
                         <frame duration="1" hotspotX="0.454545" hotspotY="0.612903" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
                             <collision-poly>
                                 <point x="0.306818" y="0.346774" />
@@ -635,7 +635,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="mouse_face_back" pingpong="0" repeatcount="1" repeatto="0" sid="157927590117044" speed="5">
+                    <animation framecount="1" loop="0" name="face_back" pingpong="0" repeatcount="1" repeatto="0" sid="157927590117044" speed="5">
                         <frame duration="1" hotspotX="0.473684" hotspotY="0.357143" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
                             <collision-poly>
                                 <point x="0.210526" y="0.142857" />
@@ -649,7 +649,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="mouse_face_left" pingpong="0" repeatcount="1" repeatto="0" sid="829372832450826" speed="5">
+                    <animation framecount="1" loop="0" name="face_left" pingpong="0" repeatcount="1" repeatto="0" sid="829372832450826" speed="5">
                         <frame duration="1" hotspotX="0.354839" hotspotY="0.52381" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
                             <collision-poly>
                                 <point x="0.0483871" y="0.5" />
@@ -662,7 +662,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="mouse_face_right" pingpong="0" repeatcount="1" repeatto="0" sid="607515194996759" speed="5">
+                    <animation framecount="1" loop="0" name="face_right" pingpong="0" repeatcount="1" repeatto="0" sid="607515194996759" speed="5">
                         <frame duration="1" hotspotX="0.689655" hotspotY="0.473684" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
                             <collision-poly>
                                 <point x="0.310345" y="0.473684" />
@@ -676,7 +676,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="mouse_walk_front" pingpong="0" repeatcount="1" repeatto="0" sid="247744548017653" speed="5">
+                    <animation framecount="2" loop="0" name="walk_front" pingpong="0" repeatcount="1" repeatto="0" sid="247744548017653" speed="5">
                         <frame duration="1" hotspotX="0.444444" hotspotY="0.607143" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
                             <collision-poly>
                                 <point x="0.291667" y="0.276786" />
@@ -702,7 +702,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="mouse_walk_back" pingpong="0" repeatcount="1" repeatto="0" sid="685039810368116" speed="5">
+                    <animation framecount="2" loop="0" name="walk_back" pingpong="0" repeatcount="1" repeatto="0" sid="685039810368116" speed="5">
                         <frame duration="1" hotspotX="0.4375" hotspotY="0.307692" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
                             <collision-poly>
                                 <point x="0.1875" y="0.115385" />
@@ -727,7 +727,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="mouse_walk_left" pingpong="0" repeatcount="1" repeatto="0" sid="148067354753638" speed="5">
+                    <animation framecount="2" loop="0" name="walk_left" pingpong="0" repeatcount="1" repeatto="0" sid="148067354753638" speed="5">
                         <frame duration="1" hotspotX="0.357143" hotspotY="0.625" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
                             <collision-poly>
                                 <point x="0.107143" y="0.1875" />
@@ -753,7 +753,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="mouse_walk_right" pingpong="0" repeatcount="1" repeatto="0" sid="687351042103131" speed="5">
+                    <animation framecount="2" loop="0" name="walk_right" pingpong="0" repeatcount="1" repeatto="0" sid="687351042103131" speed="5">
                         <frame duration="1" hotspotX="0.642857" hotspotY="0.571429" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
                             <collision-poly>
                                 <point x="0.178571" y="0.357143" />
@@ -784,7 +784,7 @@
             <object-type name="scorpion" sid="935006853956449">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="scorpion_face_front" pingpong="0" repeatcount="1" repeatto="0" sid="108663737139264" speed="5">
+                    <animation framecount="1" loop="0" name="face_front" pingpong="0" repeatcount="1" repeatto="0" sid="108663737139264" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.65625" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
                             <collision-poly>
                                 <point x="0.391667" y="0.101563" />
@@ -798,7 +798,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="scorpion_face_back" pingpong="0" repeatcount="1" repeatto="0" sid="936634323156042" speed="5">
+                    <animation framecount="1" loop="0" name="face_back" pingpong="0" repeatcount="1" repeatto="0" sid="936634323156042" speed="5">
                         <frame duration="1" hotspotX="0.483871" hotspotY="0.387097" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
                             <collision-poly>
                                 <point x="0.0967742" y="0.0967742" />
@@ -812,7 +812,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="scorpion_face_left" pingpong="0" repeatcount="1" repeatto="0" sid="880059087402708" speed="5">
+                    <animation framecount="1" loop="0" name="face_left" pingpong="0" repeatcount="1" repeatto="0" sid="880059087402708" speed="5">
                         <frame duration="1" hotspotX="0.46875" hotspotY="0.551724" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
                             <collision-poly>
                                 <point x="0.296875" y="0.206897" />
@@ -826,7 +826,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="scorpion_face_right" pingpong="0" repeatcount="1" repeatto="0" sid="193699763591047" speed="5">
+                    <animation framecount="1" loop="0" name="face_right" pingpong="0" repeatcount="1" repeatto="0" sid="193699763591047" speed="5">
                         <frame duration="1" hotspotX="0.46875" hotspotY="0.464286" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
                             <collision-poly>
                                 <point x="0.101563" y="0.0178571" />
@@ -840,7 +840,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="scorpion_walk_front" pingpong="0" repeatcount="1" repeatto="0" sid="273740871803725" speed="5">
+                    <animation framecount="2" loop="0" name="walk_front" pingpong="0" repeatcount="1" repeatto="0" sid="273740871803725" speed="5">
                         <frame duration="1" hotspotX="0.517241" hotspotY="0.625" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
                             <collision-poly>
                                 <point x="0.351563" y="0.0882353" />
@@ -866,7 +866,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="scorpion_walk_back" pingpong="0" repeatcount="1" repeatto="0" sid="890884618551737" speed="5">
+                    <animation framecount="2" loop="0" name="walk_back" pingpong="0" repeatcount="1" repeatto="0" sid="890884618551737" speed="5">
                         <frame duration="1" hotspotX="0.516129" hotspotY="0.37037" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
                             <collision-poly>
                                 <point x="0.145161" y="0.0648148" />
@@ -892,7 +892,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="scorpion_walk_left" pingpong="0" repeatcount="1" repeatto="0" sid="215286993700127" speed="5">
+                    <animation framecount="2" loop="0" name="walk_left" pingpong="0" repeatcount="1" repeatto="0" sid="215286993700127" speed="5">
                         <frame duration="1" hotspotX="0.46875" hotspotY="0.571429" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
                             <collision-poly>
                                 <point x="0.21875" y="0.25" />
@@ -918,7 +918,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="scorpion_walk_right" pingpong="0" repeatcount="1" repeatto="0" sid="983330912764326" speed="5">
+                    <animation framecount="2" loop="0" name="walk_right" pingpong="0" repeatcount="1" repeatto="0" sid="983330912764326" speed="5">
                         <frame duration="1" hotspotX="0.548387" hotspotY="0.551724" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
                             <collision-poly>
                                 <point x="0.0967742" y="0.103448" />
@@ -953,13 +953,11 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="direction" sid="800783523171828" type="string" />
+                <instance-variable name="level" sid="346591543602908" type="number" />
                 <instance-variable name="health" sid="391775150769038" type="number" />
                 <instance-variable name="energy" sid="586130700745691" type="number" />
                 <instance-variable name="damage" sid="116422227291543" type="number" />
                 <instance-variable name="defense" sid="383420410013668" type="number" />
-                <instance-variable name="STR" sid="760863438808582" type="number" />
-                <instance-variable name="AGI" sid="323460896769293" type="number" />
-                <instance-variable name="INT" sid="241196840174306" type="number" />
                 <instance-variable name="job" sid="995165498917929" type="string" />
                 <instance-variable name="attack" sid="490397830739299" type="boolean" />
             </instance-variables>
@@ -5734,8 +5732,21 @@
                 </animation-folder>
             </animation-folder>
         </object-type>
-        <object-type name="LocalStorage" sid="798885006751444">
-            <plugin id="LocalStorage" />
+        <object-type name="enemiesSpawner" sid="982129664920193">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="813678482278684" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="234798659919799">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="335904763636554" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.423077" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -5756,6 +5767,29 @@
                 <member>forestMouse</member>
                 <member>scorpion</member>
             </members>
+            <instance-variables>
+                <instance-variable name="level" sid="558521904443843" type="number" />
+                <instance-variable name="health" sid="648073984506755" type="number" />
+                <instance-variable name="damage" sid="813467730848468" type="number" />
+                <instance-variable name="defense" sid="176875715035479" type="number" />
+                <instance-variable name="attack" sid="253720996727845" type="boolean" />
+                <instance-variable name="direction" sid="528227240400404" type="string" />
+                <instance-variable name="maxHealth" sid="153660222813548" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="LineOfSight" sid="733529680647421">
+                    <behavior id="LOS" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="363765487375304">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="418670650249221">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="801763328678091">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>
@@ -5778,7 +5812,6 @@
         <global-instance type="Mouse" uid="3" />
         <global-instance type="Browser" uid="4" />
         <global-instance type="Keyboard" uid="8" />
-        <global-instance type="LocalStorage" uid="94" />
     </global-instances>
     <sounds-folder />
     <music-folder />

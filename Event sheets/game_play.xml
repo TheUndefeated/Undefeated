@@ -3,21 +3,81 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>game_play</name>
     <events>
+        <variable constant="0" name="lastLocation" sid="896736060903036" static="0" type="number">0</variable>
         <variable constant="0" name="job" sid="536038304458999" static="0" type="number">0</variable>
         <event-block sid="170592531727692">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="600461257902190" type="System" />
             </conditions>
             <actions>
-                <action id="-4" name="Set position to another object" sid="126128402134502" type="main_char">
-                    <param id="0" name="Object">return_home</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
                 <action id="-13" name="Set boolean" sid="623588730010583" type="main_char">
                     <param id="0" name="Instance variable">attack</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-10" name="Set value" sid="899212990578526" type="main_char">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">main_char.level*100</param>
+                </action>
+                <action id="-10" name="Set value" sid="736193390864791" type="main_char">
+                    <param id="0" name="Instance variable">energy</param>
+                    <param id="1" name="Value">main_char.level*30</param>
+                </action>
+                <action id="-10" name="Set value" sid="284421592813156" type="main_char">
+                    <param id="0" name="Instance variable">damage</param>
+                    <param id="1" name="Value">main_char.level*25</param>
+                </action>
+                <action id="-10" name="Set value" sid="141450373832489" type="main_char">
+                    <param id="0" name="Instance variable">defense</param>
+                    <param id="1" name="Value">main_char.level*15</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block sid="338809871271780">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="548289752493617" type="System">
+                            <param id="0" name="Variable">lastLocation</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="208516361632355" type="main_char">
+                            <param id="0" name="Object">warp1</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="357986197438728">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="782245803402786" type="System">
+                            <param id="0" name="Variable">lastLocation</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="108529757365537" type="main_char">
+                            <param id="0" name="Object">warp2</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="299970101214536">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="211887804614098" type="System">
+                            <param id="0" name="Variable">lastLocation</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="584866058276545" type="main_char">
+                            <param id="0" name="Object">warp3</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="" sid="438856717123978" title="Player movement2">
             <sub-events>
@@ -281,6 +341,10 @@
                         <action id="-25" name="Go to layout (by name)" sid="970354874816095" type="System">
                             <param id="0" name="Layout">&quot;dungeon_batu&quot;</param>
                         </action>
+                        <action id="-9" name="Set value" sid="176726816216989" type="System">
+                            <param id="0" name="Variable">lastLocation</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -303,6 +367,10 @@
                         <action id="-25" name="Go to layout (by name)" sid="966669595293223" type="System">
                             <param id="0" name="Layout">&quot;dungeon_hijau&quot;</param>
                         </action>
+                        <action id="-9" name="Set value" sid="523648754062993" type="System">
+                            <param id="0" name="Variable">lastLocation</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -324,6 +392,10 @@
                     <actions>
                         <action id="-25" name="Go to layout (by name)" sid="889838670658290" type="System">
                             <param id="0" name="Layout">&quot;dungeon_es&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="685090053469058" type="System">
+                            <param id="0" name="Variable">lastLocation</param>
+                            <param id="1" name="Value">3</param>
                         </action>
                     </actions>
                 </event-block>

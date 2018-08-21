@@ -224,22 +224,84 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <level>0</level>
+                        <health>0</health>
+                        <damage>0</damage>
+                        <defense>0</defense>
+                        <attack>false</attack>
+                        <direction></direction>
+                        <maxHealth>0</maxHealth>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>75</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>45</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>Yes</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>541</x>
+                        <x>931</x>
+                        <y>624</y>
+                        <z>0</z>
+                        <width>22</width>
+                        <height>31</height>
+                        <depth>0</depth>
+                        <hotspotX>0.454545468</hotspotX>
+                        <hotspotY>0.612903237</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="enemiesSpawner" uid="80">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>129</x>
                         <y>98</y>
                         <z>0</z>
-                        <width>22</width>
-                        <height>31</height>
+                        <width>65</width>
+                        <height>62</height>
                         <depth>0</depth>
-                        <hotspotX>0.454545468</hotspotX>
-                        <hotspotY>0.612903237</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="forestMouse" uid="64">
+                <instance type="enemiesSpawner" uid="81">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -249,19 +311,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>837</x>
-                        <y>100</y>
+                        <x>350</x>
+                        <y>99</y>
                         <z>0</z>
-                        <width>22</width>
-                        <height>31</height>
+                        <width>65</width>
+                        <height>62</height>
                         <depth>0</depth>
-                        <hotspotX>0.454545468</hotspotX>
-                        <hotspotY>0.612903237</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="forestMouse" uid="65">
+                <instance type="enemiesSpawner" uid="82">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -271,19 +333,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>871</x>
-                        <y>319</y>
+                        <x>129</x>
+                        <y>449</y>
                         <z>0</z>
-                        <width>22</width>
-                        <height>31</height>
+                        <width>65</width>
+                        <height>62</height>
                         <depth>0</depth>
-                        <hotspotX>0.454545468</hotspotX>
-                        <hotspotY>0.612903237</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="forestMouse" uid="66">
+                <instance type="enemiesSpawner" uid="83">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -293,19 +355,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>872</x>
-                        <y>499</y>
+                        <x>421</x>
+                        <y>446</y>
                         <z>0</z>
-                        <width>22</width>
-                        <height>31</height>
+                        <width>65</width>
+                        <height>62</height>
                         <depth>0</depth>
-                        <hotspotX>0.454545468</hotspotX>
-                        <hotspotY>0.612903237</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="forestMouse" uid="67">
+                <instance type="enemiesSpawner" uid="84">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -315,19 +377,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>410</x>
-                        <y>457</y>
+                        <x>612</x>
+                        <y>388</y>
                         <z>0</z>
-                        <width>22</width>
-                        <height>31</height>
+                        <width>65</width>
+                        <height>62</height>
                         <depth>0</depth>
-                        <hotspotX>0.454545468</hotspotX>
-                        <hotspotY>0.612903237</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="forestMouse" uid="68">
+                <instance type="enemiesSpawner" uid="86">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -337,19 +399,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>113</x>
-                        <y>464</y>
+                        <x>548</x>
+                        <y>98</y>
                         <z>0</z>
-                        <width>22</width>
-                        <height>31</height>
+                        <width>65</width>
+                        <height>62</height>
                         <depth>0</depth>
-                        <hotspotX>0.454545468</hotspotX>
-                        <hotspotY>0.612903237</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="forestMouse" uid="69">
+                <instance type="enemiesSpawner" uid="87">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -359,19 +421,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>364</x>
-                        <y>97</y>
+                        <x>830</x>
+                        <y>102</y>
                         <z>0</z>
-                        <width>22</width>
-                        <height>31</height>
+                        <width>65</width>
+                        <height>62</height>
                         <depth>0</depth>
-                        <hotspotX>0.454545468</hotspotX>
-                        <hotspotY>0.612903237</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="forestMouse" uid="70">
+                <instance type="enemiesSpawner" uid="88">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -381,19 +443,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>114</x>
-                        <y>92</y>
+                        <x>864</x>
+                        <y>323</y>
                         <z>0</z>
-                        <width>22</width>
-                        <height>31</height>
+                        <width>65</width>
+                        <height>62</height>
                         <depth>0</depth>
-                        <hotspotX>0.454545468</hotspotX>
-                        <hotspotY>0.612903237</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="forestMouse" uid="71">
+                <instance type="enemiesSpawner" uid="97">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -403,19 +465,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>649</x>
-                        <y>417</y>
+                        <x>865</x>
+                        <y>481</y>
                         <z>0</z>
-                        <width>22</width>
-                        <height>31</height>
+                        <width>65</width>
+                        <height>62</height>
                         <depth>0</depth>
-                        <hotspotX>0.454545468</hotspotX>
-                        <hotspotY>0.612903237</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="forestMouse" uid="72">
+                <instance type="enemiesSpawner" uid="98">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -425,14 +487,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>235</x>
-                        <y>282</y>
+                        <x>244</x>
+                        <y>259</y>
                         <z>0</z>
-                        <width>22</width>
-                        <height>31</height>
+                        <width>65</width>
+                        <height>62</height>
                         <depth>0</depth>
-                        <hotspotX>0.454545468</hotspotX>
-                        <hotspotY>0.612903237</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
