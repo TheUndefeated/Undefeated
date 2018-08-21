@@ -77,6 +77,21 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="851740890648681">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="156786187030906" type="System">
+                            <param id="0" name="Variable">lastLocation</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="108809104740377" type="main_char">
+                            <param id="0" name="Object">return_home</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-group description="" sid="438856717123978" title="Player movement2">
@@ -396,6 +411,32 @@
                         <action id="-9" name="Set value" sid="685090053469058" type="System">
                             <param id="0" name="Variable">lastLocation</param>
                             <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="494065871716522">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="379798350887261" type="main_char">
+                    <param id="0" name="Object">return_home</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="235119095919146">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="152545841344855" type="Keyboard">
+                            <param id="0" name="Key">69 (E)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="740475559995060" type="System">
+                            <param id="0" name="Layout">&quot;hunting_zone&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="835194659499287" type="System">
+                            <param id="0" name="Variable">lastLocation</param>
+                            <param id="1" name="Value">4</param>
                         </action>
                     </actions>
                 </event-block>
