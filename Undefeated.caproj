@@ -14,10 +14,13 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
@@ -496,18 +499,23 @@
         <object-folder name="Enemies">
             <object-type name="fish" sid="813102940648178">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LineOfSight2" sid="621720365779105">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="face_front" pingpong="0" repeatcount="1" repeatto="0" sid="253154025580178" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.575758" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\iguana sprite.png">
+                        <frame duration="1" hotspotX="0.575758" hotspotY="0.5" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\iguana sprite.png">
                             <collision-poly>
-                                <point x="0.1875" y="0.181818" />
-                                <point x="0.5" y="0" />
-                                <point x="0.8125" y="0.181818" />
-                                <point x="1" y="0.484848" />
-                                <point x="0.84375" y="0.848485" />
-                                <point x="0.5" y="0.939394" />
-                                <point x="0.15625" y="0.848485" />
-                                <point x="0.03125" y="0.484848" />
+                                <point x="0.181818" y="0.8125" />
+                                <point x="0" y="0.5" />
+                                <point x="0.181818" y="0.1875" />
+                                <point x="0.484848" y="0" />
+                                <point x="0.848485" y="0.15625" />
+                                <point x="0.939394" y="0.5" />
+                                <point x="0.848485" y="0.84375" />
+                                <point x="0.484848" y="0.96875" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -660,16 +668,16 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="face_front" pingpong="0" repeatcount="1" repeatto="0" sid="329156977840226" speed="5">
-                        <frame duration="1" hotspotX="0.454545" hotspotY="0.612903" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
+                        <frame duration="1" hotspotX="0.612903" hotspotY="0.545455" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\tikus sprite.png">
                             <collision-poly>
-                                <point x="0.306818" y="0.346774" />
-                                <point x="0.420455" y="0.104839" />
-                                <point x="0.5" y="0.314516" />
-                                <point x="0.761364" y="0.548387" />
-                                <point x="0.681818" y="0.774194" />
-                                <point x="0.5" y="0.903226" />
-                                <point x="0.227273" y="0.83871" />
-                                <point x="0.0681818" y="0.5" />
+                                <point x="0.346774" y="0.693182" />
+                                <point x="0.104839" y="0.579545" />
+                                <point x="0.314516" y="0.5" />
+                                <point x="0.548387" y="0.238636" />
+                                <point x="0.774194" y="0.318182" />
+                                <point x="0.903226" y="0.5" />
+                                <point x="0.83871" y="0.772727" />
+                                <point x="0.5" y="0.931818" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -823,16 +831,16 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="face_front" pingpong="0" repeatcount="1" repeatto="0" sid="108663737139264" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.65625" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
+                        <frame duration="1" hotspotX="0.65625" hotspotY="0.5" original-source="D:\Construct 2\undefeated\coba liat dulu mana tau dibutuhin\musuh\kelajengking sprite.png">
                             <collision-poly>
-                                <point x="0.391667" y="0.101563" />
-                                <point x="0.5" y="0.03125" />
-                                <point x="0.658333" y="0.109375" />
-                                <point x="0.8" y="0.5" />
-                                <point x="1" y="0.835938" />
-                                <point x="0.5" y="0.90625" />
-                                <point x="0" y="0.773438" />
-                                <point x="0.2" y="0.5" />
+                                <point x="0.101563" y="0.608333" />
+                                <point x="0.03125" y="0.5" />
+                                <point x="0.109375" y="0.341667" />
+                                <point x="0.5" y="0.2" />
+                                <point x="0.835938" y="0" />
+                                <point x="0.90625" y="0.5" />
+                                <point x="0.773438" y="1" />
+                                <point x="0.5" y="0.8" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -987,6 +995,85 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="HUD">
+            <object-type name="hud" sid="241099649403489">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="872169559877094">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="913443933311579" speed="5">
+                        <frame duration="1" hotspotX="1.004" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpriteFont" sid="881003574002154">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="SpriteFont2" sid="693246284788899">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="Sprite2" sid="681656966742890">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="323345933737381">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="953268395515911" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpriteFont3" sid="327639924521249">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="energy" sid="736171101371778">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="119699208051532">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="303477551032959" speed="5">
+                        <frame duration="1" hotspotX="1.004" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="energy2" sid="629044725264506">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="367170888388552">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="393248460258068" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="energy3" sid="410951736948722">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="997106788175819">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892426163893572" speed="5">
+                        <frame duration="1" hotspotX="1.004" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type global="1" name="main_char" sid="327038156562590">
             <plugin id="Sprite" />
             <instance-variables>
@@ -996,10 +1083,12 @@
                 <instance-variable name="energy" sid="586130700745691" type="number" />
                 <instance-variable name="damage" sid="116422227291543" type="number" />
                 <instance-variable name="defense" sid="383420410013668" type="number" />
+                <instance-variable name="maxHealth" sid="139722531801277" type="number" />
                 <instance-variable name="maxExp" sid="105663268780899" type="number" />
                 <instance-variable name="exp" sid="314087363727887" type="number" />
                 <instance-variable name="job" sid="995165498917929" type="string" />
                 <instance-variable name="attack" sid="490397830739299" type="boolean" />
+                <instance-variable name="maxEnergy" sid="572734085413944" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="513331617069906">
@@ -5780,6 +5869,34 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite3" sid="931584143180481">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="580339523713617" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteFont4" sid="869862286429526">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type global="1" name="Text" sid="293157041793429">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Tilemap" sid="449078776598058">
+            <plugin id="Tilemap" />
+            <texture original-source="D:\KULIAH\MATKUL\CAWU 3\software engineering\project software engineering\UNDEFEATED\progress\real one\gameOver\hqdefault.jpg" />
+            <tiles />
+        </object-type>
+        <object-type name="start_position" sid="393544647050108">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="405578109554619" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="MenuButton" plugin-id="Sprite" sid="910771097640765">
@@ -5834,6 +5951,7 @@
             <layout>dungeon_hijau.xml</layout>
             <layout>dungeon_es.xml</layout>
             <layout>hunting_zone.xml</layout>
+            <layout>game_over.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
@@ -5841,6 +5959,7 @@
         <event-sheet>game_play.xml</event-sheet>
         <event-sheet>dungeon.xml</event-sheet>
         <event-sheet>hunting_zone.xml</event-sheet>
+        <event-sheet>game_over.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="3" />
