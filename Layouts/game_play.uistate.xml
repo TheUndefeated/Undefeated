@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>562.947</position-x>
-        <position-y>180.309</position-y>
-        <position-z>161.051</position-z>
-        <lookat-x>562.947</lookat-x>
-        <lookat-y>180.309</lookat-y>
+        <position-x>501.006</position-x>
+        <position-y>201.181</position-y>
+        <position-z>84.9918</position-z>
+        <lookat-x>501.006</lookat-x>
+        <lookat-y>201.181</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>0</snap-to-grid>
@@ -23,11 +23,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="option" />
+    <active-layer name="healthbar" />
     <layers>
         <layer locked="1" name="background" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="solid" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Character" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="option" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="option" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="healthbar" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="energy" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="XP" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

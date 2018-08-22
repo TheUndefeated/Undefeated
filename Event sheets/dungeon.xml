@@ -270,7 +270,7 @@
                     <actions>
                         <action id="-12" name="Subtract from" sid="715138369316403" type="Enemies">
                             <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Value">main_char.damage-(Enemies.defense/2)</param>
+                            <param id="1" name="Value">main_char.damage-(Enemies.defense-2)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -537,6 +537,23 @@
                         <action behavior="8Direction" id="2" name="Set ignoring input" sid="381450266397592" type="Enemies">
                             <param id="0" name="Input">1</param>
                         </action>
+                        <action id="-10" name="Set value" sid="520343529189517" type="main_char">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">main_char.maxHealth</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="471100447944142" type="main_char">
+                            <param id="0" name="Instance variable">energy</param>
+                            <param id="1" name="Value">main_char.maxEnergy</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="912111393739515" type="hud">
+                            <param id="0" name="Width">(main_char.health/main_char.maxHealth)*200</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="723073540412731" type="energy">
+                            <param id="0" name="Width">(main_char.energy/main_char.maxEnergy)*200</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="167985729793213" type="energy3">
+                            <param id="0" name="Width">(main_char.exp/main_char.maxExp)*200</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="328678893213250">
@@ -643,7 +660,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="691280326625992" type="fish">
                                     <param id="0" name="Instance variable">maxHealth</param>
-                                    <param id="1" name="Value">scorpion.level*50</param>
+                                    <param id="1" name="Value">fish.level*50</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -665,28 +682,169 @@
                     <param id="0" name="Instance variable">exp</param>
                     <param id="1" name="Value">enemies.level*20</param>
                 </action>
+                <action id="-5" name="Set width" sid="138725478998248" type="energy3">
+                    <param id="0" name="Width">(main_char.exp/main_char.maxExp)*200</param>
+                </action>
+                <action id="0" name="Set text" sid="154162286851224" type="Text">
+                    <param id="0" name="Text">main_char.level</param>
+                </action>
             </actions>
             <sub-events>
-                <event-block sid="130696615995016">
+                <event-block sid="536012180062555">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="305298471299051" type="System">
+                        <condition id="-8" name="Compare two values" sid="901222118804602" type="System">
                             <param id="0" name="First value">main_char.exp</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">main_char.maxExp</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="647533986746892" type="main_char">
+                        <action id="-12" name="Subtract from" sid="283913267026697" type="main_char">
                             <param id="0" name="Instance variable">exp</param>
                             <param id="1" name="Value">main_char.maxExp</param>
                         </action>
-                        <action id="-11" name="Add to" sid="411690939666468" type="main_char">
+                        <action id="-11" name="Add to" sid="251117624686168" type="main_char">
                             <param id="0" name="Instance variable">level</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="761030814085917" type="main_char">
+                            <param id="0" name="Instance variable">maxExp</param>
+                            <param id="1" name="Value">(main_char.maxExp/2)+50</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="305493273808518" type="main_char">
+                            <param id="0" name="Instance variable">maxHealth</param>
+                            <param id="1" name="Value">main_char.level*100</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="762798220264565" type="main_char">
+                            <param id="0" name="Instance variable">maxEnergy</param>
+                            <param id="1" name="Value">main_char.level*30</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="740802447313787" type="main_char">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Value">main_char.level*25</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="916251525683446" type="main_char">
+                            <param id="0" name="Instance variable">defense</param>
+                            <param id="1" name="Value">main_char.level*15</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="903077974057482" type="main_char">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">main_char.maxHealth</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="281783278127685" type="main_char">
+                            <param id="0" name="Instance variable">energy</param>
+                            <param id="1" name="Value">main_char.maxEnergy</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="397957790867975" type="hud">
+                            <param id="0" name="Width">(main_char.health/main_char.maxHealth)*200</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="264024652993133" type="energy">
+                            <param id="0" name="Width">(main_char.energy/main_char.maxEnergy)*200</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="766221612130631" type="energy3">
+                            <param id="0" name="Width">(main_char.exp/main_char.maxExp)*200</param>
+                        </action>
+                        <action id="0" name="Set text" sid="458537149113972" type="Text">
+                            <param id="0" name="Text">main_char.level</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="882371575146579">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="451844223599011" type="Enemies">
+                    <param id="0" name="Object">main_char</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="499759886043526">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="594498973509312" type="main_char">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Enemies.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="464635098368013" type="Enemies">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="602817815798242">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="922919676961693" type="main_char">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Enemies.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="393551826462123" type="Enemies">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="100565979227836">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="190621064605329" type="main_char">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Enemies.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="132645154629664" type="Enemies">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="494650529876133">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="453416990623805" type="main_char">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">Enemies.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="465310822590621" type="Enemies">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="702792859051452">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="446820014330484" type="main_char">
+                    <param id="0" name="Object">Enemies</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="535509151464576" type="main_char">
+                    <param id="0" name="Instance variable">attack</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="150642922818778" type="main_char">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">enemies.damage-(main_char.defense/2)</param>
+                </action>
+                <action id="-5" name="Set width" sid="958373128690226" type="hud">
+                    <param id="0" name="Width">(main_char.health/main_char.maxHealth)*200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="450288632405916">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="620573003973559" type="main_char">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="776867649139430" type="System">
+                    <param id="0" name="Layout">game_over</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

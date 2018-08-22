@@ -7,6 +7,17 @@
         <variable constant="0" name="prev_music" sid="647401257497882" static="0" type="number">0</variable>
         <variable constant="0" name="sfx" sid="598644500177717" static="0" type="number">0</variable>
         <variable constant="0" name="music" sid="201878347785065" static="0" type="number">0</variable>
+        <event-block sid="591340806264530">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="154324195904241" type="System" />
+            </conditions>
+            <actions>
+                <action id="-7" name="Scroll to position" sid="239126001241697" type="System">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="658813376468180">
             <conditions>
                 <condition id="7" name="Cursor is over object" sid="680231713378448" type="Mouse">
