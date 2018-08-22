@@ -155,6 +155,36 @@
                 <texture original-source="D:\KULIAH\MATKUL\CAWU 3\software engineering\project software engineering\progress\referensi\buat map\xi8fxwC.png" />
                 <tiles />
             </object-type>
+            <object-type name="Tilemap11" sid="293395766640548">
+                <plugin id="Tilemap" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="642481433074849">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\11.png" />
+                <tiles />
+            </object-type>
+            <object-type name="Tilemap13" sid="842831879018571">
+                <plugin id="Tilemap" />
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\kaktus.png" />
+                <tiles />
+            </object-type>
+            <object-type name="Tilemap6" sid="382183950449376">
+                <plugin id="Tilemap" />
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\light_sand_template-680x382.jpg" />
+                <tiles />
+            </object-type>
+            <object-type name="Tilemap7" sid="147593685031469">
+                <plugin id="Tilemap" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="373478308312328">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\10.png" />
+                <tiles />
+            </object-type>
         </object-folder>
         <object-folder name="Control system">
             <object-type name="Browser" sid="418252449397849">
@@ -966,6 +996,8 @@
                 <instance-variable name="energy" sid="586130700745691" type="number" />
                 <instance-variable name="damage" sid="116422227291543" type="number" />
                 <instance-variable name="defense" sid="383420410013668" type="number" />
+                <instance-variable name="maxExp" sid="105663268780899" type="number" />
+                <instance-variable name="exp" sid="314087363727887" type="number" />
                 <instance-variable name="job" sid="995165498917929" type="string" />
                 <instance-variable name="attack" sid="490397830739299" type="boolean" />
             </instance-variables>
@@ -5747,44 +5779,6 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="Sprite" sid="234798659919799">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="335904763636554" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0.424" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Tilemap6" sid="382183950449376">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\light_sand_template-680x382.jpg" />
-            <tiles />
-        </object-type>
-        <object-type name="Tilemap11" sid="293395766640548">
-            <plugin id="Tilemap" />
-            <behaviors>
-                <behavior-type name="Solid" sid="642481433074849">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\11.png" />
-            <tiles />
-        </object-type>
-        <object-type name="Tilemap7" sid="147593685031469">
-            <plugin id="Tilemap" />
-            <behaviors>
-                <behavior-type name="Solid" sid="373478308312328">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\10.png" />
-            <tiles />
-        </object-type>
-        <object-type name="Tilemap13" sid="842831879018571">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\LAPTOP\Desktop\PROJECT LUCKNUT\buat dungeon\kaktus.png" />
-            <tiles />
         </object-type>
     </object-folder>
     <families>

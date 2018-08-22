@@ -995,11 +995,13 @@
                     </properties>
                     <instance-variables>
                         <direction></direction>
-                        <level>5</level>
+                        <level>1</level>
                         <health>0</health>
                         <energy>0</energy>
                         <damage>0</damage>
                         <defense>0</defense>
+                        <maxExp>200</maxExp>
+                        <exp>0</exp>
                         <job></job>
                         <attack>false</attack>
                     </instance-variables>
