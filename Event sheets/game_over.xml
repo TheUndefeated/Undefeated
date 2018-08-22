@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>game_over</name>
+    <events>
+        <event-block sid="106115320129353">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="123952344263687" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="945458195716547" type="main_char">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-7" name="Scroll to position" sid="675199974323359" type="System">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="842927111201665" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="710000084119417" type="System">
+                    <param id="0" name="Layout">start_screen</param>
+                </action>
+                <action id="-9" name="Set value" sid="205101765855249" type="System">
+                    <param id="0" name="Variable">firstStart</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="413138019132391" type="System">
+                    <param id="0" name="Variable">lastLocation</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

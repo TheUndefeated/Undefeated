@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2layout>
+    <name>game_over</name>
+    <sid>851760279515769</sid>
+    <event-sheet>game_over</event-sheet>
+    <size>
+        <width>1024</width>
+        <height>576</height>
+    </size>
+    <margins>
+        <horizontal>500</horizontal>
+        <vertical>500</vertical>
+    </margins>
+    <unbounded-scrolling>0</unbounded-scrolling>
+    <layers>
+        <layer name="Layer 0" sid="115815087002420">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Tilemap" uid="134">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <tile-width>32</tile-width>
+                        <tile-height>32</tile-height>
+                        <tile-x-offset>0</tile-x-offset>
+                        <tile-y-offset>0</tile-y-offset>
+                        <tile-x-spacing>0</tile-x-spacing>
+                        <tile-y-spacing>0</tile-y-spacing>
+                        <seamless-mode>On</seamless-mode>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>1024</width>
+                        <height>576</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                    <tilemap-data>
+                        <width>32</width>
+                        <height>18</height>
+                        <max-width>32</max-width>
+                        <max-height>18</max-height>
+                        <data>128,128,98,128,98,98,98,98,98,98,98,98,98,98,98,98,98,98,129,98,75,75,75,75,98,98,98,98,75,75,98,98,98,98,98,98,128,75,98,128,129,75,75,98,98,75,98,98,75,98,98,98,98,98,128,75,129,129,98,98,75,98,75,98,98,98,98,75,98,98,98,98,128,75,128,128,75,98,75,98,75,98,98,98,98,75,98,98,98,98,129,75,98,129,75,75,75,98,98,75,98,98,75,98,98,98,98,98,128,98,98,128,98,98,98,98,98,98,75,75,98,98,98,98,98,98,129,129,129,128,75,75,75,98,98,98,98,98,98,98,98,98,98,98,128,128,128,75,75,98,98,98,98,75,75,98,98,98,98,98,98,98,129,129,75,75,98,75,98,98,98,98,98,75,75,98,98,98,98,98,128,128,128,75,75,98,98,98,98,98,98,98,98,75,98,98,98,98,128,128,128,129,75,75,75,98,98,98,98,75,75,98,98,98,98,98,128,128,128,128,98,98,98,98,98,75,75,98,98,98,98,98,98,98,128,129,128,75,75,75,75,98,98,98,98,98,98,98,98,98,98,98,128,128,75,129,98,98,98,98,98,98,75,75,75,98,98,98,98,98,129,128,128,75,75,98,98,98,98,75,98,75,98,75,98,98,98,98,128,128,128,129,98,75,98,98,98,75,98,75,98,75,98,98,98,98,129,129,128,75,75,98,98,98,98,75,98,98,98,75,98,98,98,98,98,129,75,129,98,98,98,98,98,98,98,98,98,98,98,98,98,98,128,98,128,75,75,75,75,98,98,75,75,75,75,75,98,98,98,98,98,98,98,129,98,98,98,98,75,98,98,75,98,98,98,98,98,98,98,98,98,75,75,75,98,98,75,98,75,98,75,98,98,98,98,98,98,98,75,98,75,98,75,98,98,75,75,98,98,75,98,98,98,98,98,98,75,98,75,98,75,98,98,98,98,98,98,75,98,98,98,98,98,98,75,98,98,98,75,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98</data>
+                    </tilemap-data>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+    </layers>
+    <nonworld-instances />
+    <effects />
+</c2layout>
