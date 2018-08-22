@@ -527,121 +527,121 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="488002126209113" title="Enemies behaviour">
+        <event-group description="" sid="610783195624015" title="Enemies behaviour2">
             <sub-events>
-                <event-block sid="330896651952956">
+                <event-block sid="898193095021676">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="930994466036561" type="System" />
+                        <condition id="-2" name="On start of layout" sid="122081642570684" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="866694706611122" type="Enemies">
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="381450266397592" type="Enemies">
                             <param id="0" name="Input">1</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="875284442627932">
+                        <event-block sid="328678893213250">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="318687278049828" type="System">
+                                <condition id="-14" name="Compare variable" sid="355318581925142" type="System">
                                     <param id="0" name="Variable">lastLocation</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="236150749027632" type="enemiesSpawner">
+                                <action id="0" name="Spawn another object" sid="345285908203114" type="enemiesSpawner">
                                     <param id="0" name="Object">scorpion</param>
                                     <param id="1" name="Layer">2</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="706013091000161" type="scorpion">
+                                <action id="-10" name="Set value" sid="671761914246864" type="scorpion">
                                     <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Value">main_char.level</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="190963752858934" type="scorpion">
+                                <action id="-10" name="Set value" sid="519941996005458" type="scorpion">
                                     <param id="0" name="Instance variable">health</param>
                                     <param id="1" name="Value">scorpion.level*50</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="215797662366487" type="scorpion">
+                                <action id="-10" name="Set value" sid="961498217191860" type="scorpion">
                                     <param id="0" name="Instance variable">damage</param>
                                     <param id="1" name="Value">scorpion.level*10</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="298331460208839" type="scorpion">
+                                <action id="-10" name="Set value" sid="357230087779775" type="scorpion">
                                     <param id="0" name="Instance variable">defense</param>
                                     <param id="1" name="Value">scorpion.level*5</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="113394618513332" type="scorpion">
+                                <action id="-10" name="Set value" sid="453264482937768" type="scorpion">
                                     <param id="0" name="Instance variable">maxHealth</param>
                                     <param id="1" name="Value">scorpion.level*50</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="392929481057017">
+                        <event-block sid="216810897073613">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="583030608098260" type="System">
+                                <condition id="-14" name="Compare variable" sid="960529217526222" type="System">
                                     <param id="0" name="Variable">lastLocation</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="623183453234889" type="enemiesSpawner">
+                                <action id="0" name="Spawn another object" sid="513708906214984" type="enemiesSpawner">
                                     <param id="0" name="Object">forestMouse</param>
                                     <param id="1" name="Layer">2</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="851466468933826" type="forestMouse">
+                                <action id="-10" name="Set value" sid="578789076196060" type="forestMouse">
                                     <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Value">main_char.level</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
-                                <action id="-11" name="Add to" sid="276158215428630" type="forestMouse">
+                                <action id="-11" name="Add to" sid="562008924804358" type="forestMouse">
                                     <param id="0" name="Instance variable">health</param>
                                     <param id="1" name="Value">forestMouse.level*60</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="506515200197888" type="forestMouse">
+                                <action id="-10" name="Set value" sid="456781863627000" type="forestMouse">
                                     <param id="0" name="Instance variable">damage</param>
                                     <param id="1" name="Value">forestMouse.level*15</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="463971542518382" type="forestMouse">
+                                <action id="-10" name="Set value" sid="251993684733363" type="forestMouse">
                                     <param id="0" name="Instance variable">defense</param>
                                     <param id="1" name="Value">forestMouse.level*8</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="354083477969567" type="forestMouse">
+                                <action id="-10" name="Set value" sid="481845039450525" type="forestMouse">
                                     <param id="0" name="Instance variable">maxHealth</param>
                                     <param id="1" name="Value">scorpion.level*50</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="546199778580058">
+                        <event-block sid="219458051935311">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="213105083727642" type="System">
+                                <condition id="-14" name="Compare variable" sid="433349029929364" type="System">
                                     <param id="0" name="Variable">lastLocation</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">3</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="887744583280439" type="enemiesSpawner">
+                                <action id="0" name="Spawn another object" sid="400275771581109" type="enemiesSpawner">
                                     <param id="0" name="Object">fish</param>
                                     <param id="1" name="Layer">3</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="207818594031689" type="fish">
+                                <action id="-10" name="Set value" sid="338881025499830" type="fish">
                                     <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Value">main_char.level</param>
+                                    <param id="1" name="Value">3</param>
                                 </action>
-                                <action id="-11" name="Add to" sid="773878195245835" type="fish">
+                                <action id="-11" name="Add to" sid="573193106443257" type="fish">
                                     <param id="0" name="Instance variable">health</param>
                                     <param id="1" name="Value">fish.level*70</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="881269794806209" type="fish">
+                                <action id="-10" name="Set value" sid="419353452908047" type="fish">
                                     <param id="0" name="Instance variable">damage</param>
                                     <param id="1" name="Value">fish.level*20</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="358377993512473" type="fish">
+                                <action id="-10" name="Set value" sid="727319894549589" type="fish">
                                     <param id="0" name="Instance variable">defense</param>
                                     <param id="1" name="Value">fish.level*12</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="431969679720300" type="fish">
+                                <action id="-10" name="Set value" sid="691280326625992" type="fish">
                                     <param id="0" name="Instance variable">maxHealth</param>
                                     <param id="1" name="Value">scorpion.level*50</param>
                                 </action>
@@ -661,7 +661,32 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="483297394738794" type="Enemies" />
+                <action id="-11" name="Add to" sid="401662668646490" type="main_char">
+                    <param id="0" name="Instance variable">exp</param>
+                    <param id="1" name="Value">enemies.level*20</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block sid="130696615995016">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="305298471299051" type="System">
+                            <param id="0" name="First value">main_char.exp</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">main_char.maxExp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="647533986746892" type="main_char">
+                            <param id="0" name="Instance variable">exp</param>
+                            <param id="1" name="Value">main_char.maxExp</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="411690939666468" type="main_char">
+                            <param id="0" name="Instance variable">level</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
